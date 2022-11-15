@@ -1,14 +1,14 @@
 # English version
 NSFW-website-rule-for-Clash (Actually it is [CFW](https://github.com/Fndroid/clash_for_windows_pkg),not the [Clash](https://github.com/Dreamacro/clash))   
- I'm new here,and still learning how it work   
- I put this on github to optimize the use of [localprofile](https://docs.cfw.lbyczf.com/contents/parser.html#%E5%90%91%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF) which you can get from [hope140](https://github.com/hope140/Clash)  
+ I'm new here,and still learning how it work.   
+ I put this on github to optimize the use of [localprofile](https://docs.cfw.lbyczf.com/contents/parser.html#%E5%90%91%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF) which you can get from [hope140](https://github.com/hope140/Clash).  
  ## how to use
 1. Create a new provider under `rule-providers`, and fill in the url with the address of [NSFW.yaml](https://raw.githubusercontent.com/tanmoumou252/NSFW-website-rule-for-Clash/main/NSFW.yaml).  eg.  
 ![图片](https://user-images.githubusercontent.com/118299342/202003750-87bc9bf9-7e5b-4da6-84ef-4de59b5f8c31.png)  
-I`m your provider now  
-2. Scroll down to rules and add `- RULE-SET, NSFW, proxy groups you set`, as shown in the picture  
+I`m your provider now.  
+2. Scroll down to rules and add `- RULE-SET, NSFW, proxy groups you set`, as shown in the picture.  
 ![图片](https://user-images.githubusercontent.com/118299342/202005614-a1ca3c3a-f142-4357-add5-fe71ba779667.png)     
-3. Now go to [CFW](https://github.com/Fndroid/clash_for_windows_pkg) to update your [localprofile](https://docs.cfw.lbyczf.com/contents/parser.html#%E5%90%91%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF) or Parsers. If no error is reported, you can start your journey of nsfw  
+3. Now go to [CFW](https://github.com/Fndroid/clash_for_windows_pkg) to update your [localprofile](https://docs.cfw.lbyczf.com/contents/parser.html#%E5%90%91%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF) or Parsers. If no error is reported, you can start your journey of nsfw.  
 ## attention  
 * The yaml grammar pays great attention to basic ___alignment___. You can check whether there is a ___space___ after the colon of the line of code that reports the error.
 * Besides,___case sensitive___,eg. 
@@ -24,13 +24,13 @@ rule-providers:
 rules:  
   - RULE-SET,nsfw,🌍 GlobalMedia  #here are some lowercase letters
 ```  
-The above code has different letter sizes, and an error will be reported  
+The above code has different letter sizes, and an error will be reported.  
 ## others  
-  
-This English document is written by Google Translate and Baidu Translate  
-As we all know,most of the people who use clash, they speak Chinese.People who speak other languages rarely need to use this tool, unless they are also here, or company routing restricts web access  
-In other words, I don’t really need to write English documents, and now the function of translating web pages is so developed  
-Whatever，hope u like that  
+* This English document is written by Google Translate and Baidu Translate.  
+* As we all know,most of the people who use clash, they speak Chinese.People who speak other languages rarely need to use this tool, unless they are also here, or company routing restricts web access.  
+* In other words, I don’t really need to write English documents, and now the function of translating web pages is so developed.  
+* Whatever，hope u like that.  
+
 ------  
 # 简体中文版本
 一些“你懂的”网页在[clash for win](https://github.com/Fndroid/clash_for_windows_pkg)[本地配置](https://docs.cfw.lbyczf.com/contents/parser.html#%E5%90%91%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E4%BF%A1%E6%81%AF)中使用的分流规则rule-set  
