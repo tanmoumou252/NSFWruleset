@@ -1,9 +1,9 @@
 # DOMAIN-KEYWORD: 8
-# DOMAIN-SUFFIX: 105
+# DOMAIN-SUFFIX: 106
 # PROCESS-NAME: 2
-# TOTAL: 115
-# UPDATED: 2022-11-19 14:16:18
-# LOG: 网页去重
+# TOTAL: 116
+# UPDATED: 2022-11-19 17:46:42
+# LOG: 增加网页
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -106,6 +106,7 @@ payload:
   - DOMAIN-SUFFIX,tubev.sex
   - DOMAIN-SUFFIX,tvmaze.com 
   - DOMAIN-SUFFIX,upskirt.tv
+  - DOMAIN-SUFFIX,vikacg.com
   - DOMAIN-SUFFIX,vipwank.com
   - DOMAIN-SUFFIX,viviporn.tv
   - DOMAIN-SUFFIX,wnacg.com
