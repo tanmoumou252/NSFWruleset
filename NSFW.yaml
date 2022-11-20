@@ -1,8 +1,8 @@
 # DOMAIN-KEYWORD: 8
-# DOMAIN-SUFFIX: 106
+# DOMAIN-SUFFIX: 108
 # PROCESS-NAME: 2
-# TOTAL: 116
-# UPDATED: 2022-11-19 17:46:42
+# TOTAL: 118
+# UPDATED: 2022-11-20 08:59:43
 # LOG: 增加网页
 # 看剧算不算另一种意义上的NSFW呢
 
@@ -49,6 +49,8 @@ payload:
   - DOMAIN-SUFFIX,imdb.com
   - DOMAIN-SUFFIX,its.porn
   - DOMAIN-SUFFIX,ixxx.com
+  - DOMAIN-SUFFIX,jwplayer.com  
+  - DOMAIN-SUFFIX,litvp.com
   - DOMAIN-SUFFIX,lobstertube.com
   - DOMAIN-SUFFIX,maturetube.com
   - DOMAIN-SUFFIX,megatube.xxx
