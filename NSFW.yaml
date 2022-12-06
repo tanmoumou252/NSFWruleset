@@ -1,12 +1,14 @@
-# DOMAIN-KEYWORD: 9
-# DOMAIN-SUFFIX: 108
-# PROCESS-NAME: 2
-# TOTAL: 119
-# UPDATED: 2022-11-28 11:25:35
+# DOMAIN-KEYWORD: 10
+# DOMAIN-SUFFIX: 110
 # LOG: 增加网页
+# PROCESS-NAME: 2
+# REPO: https://github.com/tanmoumou252/NSFWruleset
+# TOTAL: 122
+# UPDATED: 2022-12-6 14:39:29
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
+  - DOMAIN-KEYWORD,akamai
   - DOMAIN-KEYWORD,btsow
   - DOMAIN-KEYWORD,fc2
   - DOMAIN-KEYWORD,hentai
@@ -31,6 +33,7 @@ payload:
   - DOMAIN-SUFFIX,cumlouder.com
   - DOMAIN-SUFFIX,dansmovies.com
   - DOMAIN-SUFFIX,drtuber.com
+  - DOMAIN-SUFFIX,emturbovid.com
   - DOMAIN-SUFFIX,fantia.jp
   - DOMAIN-SUFFIX,fapvidhd.com
   - DOMAIN-SUFFIX,forhertube.com
@@ -109,6 +112,7 @@ payload:
   - DOMAIN-SUFFIX,tubev.sex
   - DOMAIN-SUFFIX,tvmaze.com 
   - DOMAIN-SUFFIX,upskirt.tv
+  - DOMAIN-SUFFIX,ver1.sptvp.com
   - DOMAIN-SUFFIX,vikacg.com
   - DOMAIN-SUFFIX,vipwank.com
   - DOMAIN-SUFFIX,viviporn.tv
@@ -126,4 +130,3 @@ payload:
   - DOMAIN-SUFFIX,zooqle.com
   - PROCESS-NAME,javaw.exe
   - PROCESS-NAME,tinyMediaManager.exe
-
