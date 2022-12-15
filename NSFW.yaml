@@ -1,10 +1,10 @@
-# DOMAIN-KEYWORD: 10
-# DOMAIN-SUFFIX: 110
+# DOMAIN-KEYWORD: 11
+# DOMAIN-SUFFIX: 112
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 122
-# UPDATED: 2022-12-6 14:39:29
+# TOTAL: 125
+# UPDATED: 2022-12-15 15:05:11
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -16,12 +16,14 @@ payload:
   - DOMAIN-KEYWORD,okjiasu
   - DOMAIN-KEYWORD,-plus
   - DOMAIN-KEYWORD,porn
+  - DOMAIN-KEYWORD,rarbg
   - DOMAIN-KEYWORD,sjhs
   - DOMAIN-KEYWORD,xvideo
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
   - DOMAIN-SUFFIX,4tube.com
+  - DOMAIN-SUFFIX,69shu.com
   - DOMAIN-SUFFIX,acgn.zone
   - DOMAIN-SUFFIX,acgnx.se
   - DOMAIN-SUFFIX,alohatube.com
@@ -94,6 +96,7 @@ payload:
   - DOMAIN-SUFFIX,sexinsex.net
   - DOMAIN-SUFFIX,sexvid.xxx
   - DOMAIN-SUFFIX,shameless.com
+  - DOMAIN-SUFFIX,share.dmhy.org
   - DOMAIN-SUFFIX,skunkgirl.cc
   - DOMAIN-SUFFIX,slutload.com
   - DOMAIN-SUFFIX,spankbang.com
