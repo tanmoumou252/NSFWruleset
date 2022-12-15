@@ -1,15 +1,16 @@
-# DOMAIN-KEYWORD: 11
+# DOMAIN-KEYWORD: 12
 # DOMAIN-SUFFIX: 112
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 125
-# UPDATED: 2022-12-15 15:05:11
+# TOTAL: 126
+# UPDATED: 2022-12-15 15:10:24
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
   - DOMAIN-KEYWORD,akamai
   - DOMAIN-KEYWORD,btsow
+  - DOMAIN-KEYWORD,dyncdn
   - DOMAIN-KEYWORD,fc2
   - DOMAIN-KEYWORD,hentai
   - DOMAIN-KEYWORD,jav
