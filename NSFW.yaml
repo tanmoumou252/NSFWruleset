@@ -1,10 +1,10 @@
 # DOMAIN-KEYWORD: 12
 # DOMAIN-SUFFIX: 112
-# LOG: 增加网页
+# LOG: 增加网页，删除网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
 # TOTAL: 126
-# UPDATED: 2022-12-15 15:10:24
+# UPDATED: 2023-1-17 21:30:27
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -13,13 +13,13 @@ payload:
   - DOMAIN-KEYWORD,dyncdn
   - DOMAIN-KEYWORD,fc2
   - DOMAIN-KEYWORD,hentai
-  - DOMAIN-KEYWORD,jav
-  - DOMAIN-KEYWORD,okjiasu
+  - DOMAIN-KEYWORD,jav  
   - DOMAIN-KEYWORD,-plus
   - DOMAIN-KEYWORD,porn
   - DOMAIN-KEYWORD,rarbg
   - DOMAIN-KEYWORD,sjhs
   - DOMAIN-KEYWORD,xvideo
+  - DOMAIN-KEYWORD,zhuri
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
