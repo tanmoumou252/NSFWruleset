@@ -1,10 +1,10 @@
 # DOMAIN-KEYWORD: 12
-# DOMAIN-SUFFIX: 112
-# LOG: 增加网页，删除网页
+# DOMAIN-SUFFIX: 113
+# LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 126
-# UPDATED: 2023-1-17 21:30:27
+# TOTAL: 127
+# UPDATED: 2023-1-20 02:54:12
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -122,6 +122,7 @@ payload:
   - DOMAIN-SUFFIX,viviporn.tv
   - DOMAIN-SUFFIX,wnacg.com
   - DOMAIN-SUFFIX,xbabe.com
+  - DOMAIN-SUFFIX,xbookcn.net
   - DOMAIN-SUFFIX,xgames.zone
   - DOMAIN-SUFFIX,xhamster.com
   - DOMAIN-SUFFIX,xnxx.com
