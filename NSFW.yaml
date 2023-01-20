@@ -1,10 +1,10 @@
 # DOMAIN-KEYWORD: 12
-# DOMAIN-SUFFIX: 113
+# DOMAIN-SUFFIX: 114
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 127
-# UPDATED: 2023-1-20 02:54:12
+# TOTAL: 128
+# UPDATED: 2023-1-21 02:37:51
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -29,6 +29,7 @@ payload:
   - DOMAIN-SUFFIX,acgnx.se
   - DOMAIN-SUFFIX,alohatube.com
   - DOMAIN-SUFFIX,anidb.net
+  - DOMAIN-SUFFIX,api.surfhub.net
   - DOMAIN-SUFFIX,bigporn.com
   - DOMAIN-SUFFIX,cangku.moe
   - DOMAIN-SUFFIX,comici.win
