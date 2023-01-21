@@ -1,10 +1,10 @@
 # DOMAIN-KEYWORD: 12
-# DOMAIN-SUFFIX: 114
+# DOMAIN-SUFFIX: 115
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 128
-# UPDATED: 2023-1-21 02:37:51
+# TOTAL: 129
+# UPDATED: 2023-1-22 03:46:32
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -56,7 +56,8 @@ payload:
   - DOMAIN-SUFFIX,imcsea.club
   - DOMAIN-SUFFIX,imdb.com
   - DOMAIN-SUFFIX,its.porn
-  - DOMAIN-SUFFIX,ixxx.com
+  - DOMAIN-SUFFIX,ixxx.com  
+  - DOMAIN-SUFFIX,jwpcdn.com
   - DOMAIN-SUFFIX,jwplayer.com  
   - DOMAIN-SUFFIX,litvp.com
   - DOMAIN-SUFFIX,lobstertube.com
