@@ -255,7 +255,7 @@ rule-providers:
     url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
     interval: 86400    
 
-  Firefox:
+  Firefox:  #该分组划到了直连，但是firefox商店adblock等广告屏蔽插件直连是无法安装的，需要出国
     type: http
     behavior: classical
     path: ./RuleSet/Firefox.yaml
