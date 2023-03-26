@@ -1,10 +1,11 @@
 # DOMAIN-KEYWORD: 12
-# DOMAIN-SUFFIX: 115
+# DOMAIN-SUFFIX: 113
+# IP-CIDR: 6
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 129
-# UPDATED: 2023-1-22 03:46:32
+# TOTAL: 133
+# UPDATED: 2023-3-26 19:38:33
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -29,7 +30,6 @@ payload:
   - DOMAIN-SUFFIX,acgnx.se
   - DOMAIN-SUFFIX,alohatube.com
   - DOMAIN-SUFFIX,anidb.net
-  - DOMAIN-SUFFIX,api.surfhub.net
   - DOMAIN-SUFFIX,bigporn.com
   - DOMAIN-SUFFIX,cangku.moe
   - DOMAIN-SUFFIX,comici.win
@@ -56,8 +56,7 @@ payload:
   - DOMAIN-SUFFIX,imcsea.club
   - DOMAIN-SUFFIX,imdb.com
   - DOMAIN-SUFFIX,its.porn
-  - DOMAIN-SUFFIX,ixxx.com  
-  - DOMAIN-SUFFIX,jwpcdn.com
+  - DOMAIN-SUFFIX,ixxx.com
   - DOMAIN-SUFFIX,jwplayer.com  
   - DOMAIN-SUFFIX,litvp.com
   - DOMAIN-SUFFIX,lobstertube.com
@@ -137,3 +136,9 @@ payload:
   - DOMAIN-SUFFIX,zooqle.com
   - PROCESS-NAME,javaw.exe
   - PROCESS-NAME,tinyMediaManager.exe
+  - IP-CIDR,2a03:2880:f127:283:face:b00c:0:25de/64  # [2a03:2880:f127:0283:face:b00c:0000:25de]
+  - IP-CIDR,2606:4700::6812:159d/64   # [2606:4700:0000:0000:0000:0000:6812:159d]
+  - IP-CIDR,34.208.31.97/32
+  - IP-CIDR,34.120.208.123/32
+  - IP-CIDR,35.241.9.150/32
+  - IP-CIDR,54.188.40.0/32
