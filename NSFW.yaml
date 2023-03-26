@@ -1,11 +1,11 @@
 # DOMAIN-KEYWORD: 12
 # DOMAIN-SUFFIX: 113
-# IP-CIDR: 6
+# IP-CIDR: 8
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 133
-# UPDATED: 2023-3-26 19:38:33
+# TOTAL: 135
+# UPDATED: 2023-3-26 20:14:46
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -136,9 +136,11 @@ payload:
   - DOMAIN-SUFFIX,zooqle.com
   - PROCESS-NAME,javaw.exe
   - PROCESS-NAME,tinyMediaManager.exe
-  - IP-CIDR,2a03:2880:f127:283:face:b00c:0:25de/64  # [2a03:2880:f127:0283:face:b00c:0000:25de]
-  - IP-CIDR,2606:4700::6812:159d/64   # [2606:4700:0000:0000:0000:0000:6812:159d]
+  - IP-CIDR,2a03:2880:f134:183:face:b00c:0:25de/32  # /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
+  - IP-CIDR,2606:4700::6812:159d/32   
   - IP-CIDR,34.208.31.97/32
   - IP-CIDR,34.120.208.123/32
   - IP-CIDR,35.241.9.150/32
-  - IP-CIDR,54.188.40.0/32
+  - IP-CIDR,54.188.40.0/32    # - IP-CIDR,/32 
+  - IP-CIDR,44.228.49.203/32
+  - IP-CIDR,35.186.227.140/32
