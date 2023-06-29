@@ -1,11 +1,11 @@
 # DOMAIN-KEYWORD: 13
 # DOMAIN-SUFFIX: 114
-# IP-CIDR: 8
+# IP-CIDR: 17
 # LOG: 增加网页
 # PROCESS-NAME: 2
 # REPO: https://github.com/tanmoumou252/NSFWruleset
-# TOTAL: 137
-# UPDATED: 2023年06月23日 16:46:36
+# TOTAL: 146
+# UPDATED: 2023-6-30 05:02:46
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -14,14 +14,14 @@ payload:
   - DOMAIN-KEYWORD,dyncdn
   - DOMAIN-KEYWORD,fc2
   - DOMAIN-KEYWORD,hentai
-  - DOMAIN-KEYWORD,jav  
+  - DOMAIN-KEYWORD,jav
+  - DOMAIN-KEYWORD,mikanani  
   - DOMAIN-KEYWORD,-plus
   - DOMAIN-KEYWORD,porn
   - DOMAIN-KEYWORD,rarbg
   - DOMAIN-KEYWORD,sjhs
   - DOMAIN-KEYWORD,xvideo
   - DOMAIN-KEYWORD,zhuri
-  - DOMAIN-KEYWORD,mikanani
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
@@ -139,10 +139,19 @@ payload:
   - PROCESS-NAME,javaw.exe
   - PROCESS-NAME,tinyMediaManager.exe
   - IP-CIDR,2a03:2880:f134:183:face:b00c:0:25de/32  # /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
-  - IP-CIDR,2606:4700::6812:159d/32   
+  - IP-CIDR,2606:4700::6812:159d/32
   - IP-CIDR,34.208.31.97/32
   - IP-CIDR,34.120.208.123/32
   - IP-CIDR,35.241.9.150/32
   - IP-CIDR,54.188.40.0/32    # - IP-CIDR,/32 
   - IP-CIDR,44.228.49.203/32
   - IP-CIDR,35.186.227.140/32
+  - IP-CIDR,69.63.184.14/32      # mikanani start
+  - IP-CIDR,138.91.171.81/32
+  - IP-CIDR,115.192.30.54/32
+  - IP-CIDR,220.86.210.252/32
+  - IP-CIDR,85.238.69.248/32
+  - IP-CIDR,98.159.108.58/32
+  - IP-CIDR,23.67.75.233/32
+  - IP-CIDR,20.24.125.47/32
+  - IP-CIDR,202.89.233.101/32    # mikanani end
