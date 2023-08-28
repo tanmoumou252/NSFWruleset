@@ -1,9 +1,8 @@
 
 rules:
-#NSFW分流               #23.8.28 优化了火狐浏览器和telegram的规则 
+#NSFW分流               #23.8.28 优化IP-CIDR  精简PROCESS-NAME  规则 
 #站点大多会做区域限制,类似禁日本ip
 #规则未去重,有问题的话多看链接/日志 
-
   - DOMAIN-KEYWORD,akamai,🎯 R18
   - DOMAIN-KEYWORD,btsow,🎯 R18
   - DOMAIN-KEYWORD,dyncdn,🎯 R18
@@ -133,15 +132,6 @@ rules:
   - DOMAIN-SUFFIX,youporn.com,🎯 R18
   - DOMAIN-SUFFIX,zbporn.com,🎯 R18
   - DOMAIN-SUFFIX,zooqle.com,🎯 R18
-  - PROCESS-NAME,javaw.exe,🎯 R18
-  - PROCESS-NAME,tinyMediaManager.exe,🎯 R18
-  - IP-CIDR,2a03:2880:f134:183:face:b00c:0:25de/32,🎯 R18
-  - IP-CIDR,2606:4700::6812:159d/32,🎯 R18
-  - IP-CIDR,34.208.31.97/32,🎯 R18
-  - IP-CIDR,34.120.208.123/32,🎯 R18
-  - IP-CIDR,35.241.9.150/32,🎯 R18
-  - IP-CIDR,54.188.40.0/32,🎯 R18
-  - IP-CIDR,44.228.49.203/32,🎯 R18
 #海外分流
 #海外分流
 #海外分流
@@ -872,20 +862,9 @@ rules:
   - DOMAIN-KEYWORD,google,🚀 手动切换
   - DOMAIN-KEYWORD,gstatic,🚀 手动切换
   - DOMAIN-KEYWORD,recaptcha,🚀 手动切换
-  - IP-CIDR,172.110.32.0/21,🚀 手动切换
-  - IP-CIDR,173.194.0.0/16,🚀 手动切换
-  - IP-CIDR,216.73.80.0/20,🚀 手动切换
-  - IP-CIDR,74.125.0.0/16,🚀 手动切换
-  - IP-CIDR6,2620:120:e000::/40,🚀 手动切换
-  - PROCESS-NAME,com.android.vending,🚀 手动切换
-  - PROCESS-NAME,com.google.android.gms,🚀 手动切换
-  - PROCESS-NAME,com.google.android.gsf,🚀 手动切换
-  - PROCESS-NAME,com.google.android.play.games,🚀 手动切换
-  - PROCESS-NAME,googledrivefs.exe,🚀 手动切换
-  - PROCESS-NAME,backupandsync,🚀 手动切换
   - DOMAIN-SUFFIX,edgedatg.com,🚀 手动切换
   - DOMAIN-SUFFIX,go.com,🚀 手动切换
-#   - USER-AGENT,AbemaTV*,🚀 手动切换
+
   - DOMAIN-KEYWORD,abematv.akamaized.net,🚀 手动切换
   - DOMAIN,api-abematv.bucketeer.jp,🚀 手动切换
   - DOMAIN-SUFFIX,abema-tv.com,🚀 手动切换
@@ -894,7 +873,7 @@ rules:
   - DOMAIN-SUFFIX,ameba.jp,🚀 手动切换
   - DOMAIN-SUFFIX,hayabusa.io,🚀 手动切换
   - DOMAIN-SUFFIX,hayabusa.media,🚀 手动切换
-#   - USER-AGENT,All4*,🚀 手动切换
+
   - DOMAIN-SUFFIX,c4assets.com,🚀 手动切换
   - DOMAIN-SUFFIX,channel4.com,🚀 手动切换
   - DOMAIN-KEYWORD,avoddashs,🚀 手动切换
@@ -918,14 +897,14 @@ rules:
   - DOMAIN-SUFFIX,media-amazon.com,🚀 手动切换
   - DOMAIN-SUFFIX,pv-cdn.net,🚀 手动切换
   - DOMAIN-SUFFIX,seattlespheres.com,🚀 手动切换
-#   - URL-REGEX,^https?:\/\/www\.amazon\.com\/(Amazon-Video|gp\/video)\/,🚀 手动切换
-#   - USER-AGENT,AppleNews*,🚀 手动切换
-#   - USER-AGENT,com.apple.news*,🚀 手动切换
+
+
+
   - DOMAIN,gspe1-ssl.ls.apple.com,🚀 手动切换
   - DOMAIN,np-edge.itunes.apple.com,🚀 手动切换
   - DOMAIN,play-edge.itunes.apple.com,🚀 手动切换
   - DOMAIN-SUFFIX,tv.apple.com,🚀 手动切换
-#   - USER-AGENT,BBCiPlayer*,🚀 手动切换
+
   - DOMAIN-KEYWORD,bbcfmt,🚀 手动切换
   - DOMAIN-KEYWORD,uk-live,🚀 手动切换
   - DOMAIN,aod-dash-uk-live.akamaized.net,🚀 手动切换
@@ -940,13 +919,13 @@ rules:
   - DOMAIN-SUFFIX,bbci.co,🚀 手动切换
   - DOMAIN-SUFFIX,bbci.co.uk,🚀 手动切换
   - DOMAIN-SUFFIX,bidi.net.uk,🚀 手动切换
-#   - USER-AGENT,Anime*,🚀 手动切换
+
   - DOMAIN,bahamut.akamaized.net,🚀 手动切换
   - DOMAIN,gamer-cds.cdn.hinet.net,🚀 手动切换
   - DOMAIN,gamer2-cds.cdn.hinet.net,🚀 手动切换
   - DOMAIN-SUFFIX,bahamut.com.tw,🚀 手动切换
   - DOMAIN-SUFFIX,gamer.com.tw,🚀 手动切换
-#   - USER-AGENT,DAZN*,🚀 手动切换
+
   - DOMAIN-KEYWORD,voddazn,🚀 手动切换
   - DOMAIN,d151l6v8er5bdm.cloudfront.net,🚀 手动切换
   - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,🚀 手动切换
@@ -958,14 +937,12 @@ rules:
   - DOMAIN-SUFFIX,indazn.com,🚀 手动切换
   - DOMAIN-SUFFIX,indaznlab.com,🚀 手动切换
   - DOMAIN-SUFFIX,sentry.io,🚀 手动切换
-#   - USER-AGENT,Deezer*,🚀 手动切换
+
   - DOMAIN-SUFFIX,deezer.com,🚀 手动切换
   - DOMAIN-SUFFIX,dzcdn.net,🚀 手动切换
   - DOMAIN-SUFFIX,disco-api.com,🚀 手动切换
   - DOMAIN-SUFFIX,discovery.com,🚀 手动切换
   - DOMAIN-SUFFIX,uplynk.com,🚀 手动切换
-#   - USER-AGENT,Disney*,🚀 手动切换
-#   - USER-AGENT,Disney+*,🚀 手动切换
   - DOMAIN,cdn.registerdisney.go.com,🚀 手动切换
   - DOMAIN-SUFFIX,adobedtm.com,🚀 手动切换
   - DOMAIN-SUFFIX,bam.nr-data.net,🚀 手动切换
@@ -986,24 +963,24 @@ rules:
   - DOMAIN-SUFFIX,dssott.com,🚀 手动切换
   - DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com,🚀 手动切换
   - DOMAIN-SUFFIX,js-agent.newrelic.com,🚀 手动切换
-#   - USER-AGENT,encoreTVB*,🚀 手动切换
+
   - DOMAIN,bcbolt446c5271-a.akamaihd.net,🚀 手动切换
   - DOMAIN,content.jwplatform.com,🚀 手动切换
   - DOMAIN,edge.api.brightcove.com,🚀 手动切换
   - DOMAIN,videos-f.jwpsrv.com,🚀 手动切换
   - DOMAIN-SUFFIX,encoretvb.com,🚀 手动切换
-#   - USER-AGENT,FOX%20NOW*,🚀 手动切换
+
   - DOMAIN-SUFFIX,fox.com,🚀 手动切换
   - DOMAIN-SUFFIX,foxdcg.com,🚀 手动切换
   - DOMAIN-SUFFIX,uplynk.com,🚀 手动切换
-#   - USER-AGENT,HBO%20NOW*,🚀 手动切换
-#   - USER-AGENT,HBOMAX*,🚀 手动切换
+
+
   - DOMAIN-SUFFIX,hbo.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbogo.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbomax.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbomaxcdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbonow.com,🚀 手动切换
-#   - USER-AGENT,HBO%20GO%20PROD*,🚀 手动切换
+
   - DOMAIN-KEYWORD,.hbogoasia.,🚀 手动切换
   - DOMAIN-KEYWORD,hbogoasia,🚀 手动切换
   - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🚀 手动切换
@@ -1024,7 +1001,7 @@ rules:
   - DOMAIN-SUFFIX,hboasia.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbogoasia.com,🚀 手动切换
   - DOMAIN-SUFFIX,hbogoasia.hk,🚀 手动切换
-#   - USER-AGENT,HWTVMobile*,🚀 手动切换
+
   - DOMAIN-SUFFIX,5itv.tv,🚀 手动切换
   - DOMAIN-SUFFIX,ocnttv.com,🚀 手动切换
   - DOMAIN-SUFFIX,cws-hulu.conviva.com,🚀 手动切换
@@ -1040,12 +1017,12 @@ rules:
   - DOMAIN-SUFFIX,prod.hjholdings.tv,🚀 手动切换
   - DOMAIN-SUFFIX,streaks.jp,🚀 手动切换
   - DOMAIN-SUFFIX,yb.uncn.jp,🚀 手动切换
-#   - USER-AGENT,ITV_Player*,🚀 手动切换
+
   - DOMAIN,itvpnpmobile-a.akamaihd.net,🚀 手动切换
   - DOMAIN-SUFFIX,itv.com,🚀 手动切换
   - DOMAIN-SUFFIX,itvstatic.com,🚀 手动切换
-#   - USER-AGENT,JOOX*,🚀 手动切换
-#   - USER-AGENT,WeMusic*,🚀 手动切换
+
+
   - DOMAIN-KEYWORD,jooxweb-api,🚀 手动切换
   - DOMAIN-SUFFIX,joox.com,🚀 手动切换
   - DOMAIN-KEYWORD,japonx,🚀 手动切换
@@ -1061,32 +1038,32 @@ rules:
   - DOMAIN-SUFFIX,kfs.io,🚀 手动切换
   - DOMAIN-SUFFIX,kkbox.com,🚀 手动切换
   - DOMAIN-SUFFIX,kkbox.com.tw,🚀 手动切换
-#   - USER-AGENT,KKTV*,🚀 手动切换
-#   - USER-AGENT,com.kktv.ios.kktv*,🚀 手动切换
+
+
   - DOMAIN,kktv-theater.kk.stream,🚀 手动切换
   - DOMAIN,theater-kktv.cdn.hinet.net,🚀 手动切换
   - DOMAIN-SUFFIX,kktv.com.tw,🚀 手动切换
   - DOMAIN-SUFFIX,kktv.me,🚀 手动切换
   - DOMAIN,litvfreemobile-hichannel.cdn.hinet.net,🚀 手动切换
   - DOMAIN-SUFFIX,litv.tv,🚀 手动切换
-#   - USER-AGENT,LINE%20TV*,🚀 手动切换
-#   - USER-AGENT,LINE*,🚀 手动切换
+
+
   - DOMAIN,d3c7rimkq79yfu.cloudfront.net,🚀 手动切换
   - DOMAIN-SUFFIX,d3c7rimkq79yfu.cloudfront.net,🚀 手动切换
   - DOMAIN-SUFFIX,linetv.tw,🚀 手动切换
   - DOMAIN-SUFFIX,profile.line-scdn.net,🚀 手动切换
-#   - USER-AGENT,My5*,🚀 手动切换
+
   - DOMAIN,d349g9zuie06uo.cloudfront.net,🚀 手动切换
   - DOMAIN-SUFFIX,channel5.com,🚀 手动切换
   - DOMAIN-SUFFIX,my5.tv,🚀 手动切换
-#   - USER-AGENT,mytv*,🚀 手动切换
+
   - DOMAIN-KEYWORD,nowtv100,🚀 手动切换
   - DOMAIN-KEYWORD,rthklive,🚀 手动切换
   - DOMAIN,mytvsuperlimited.hb.omtrdc.net,🚀 手动切换
   - DOMAIN,mytvsuperlimited.sc.omtrdc.net,🚀 手动切换
   - DOMAIN-SUFFIX,mytvsuper.com,🚀 手动切换
   - DOMAIN-SUFFIX,tvb.com,🚀 手动切换
-#   - USER-AGENT,Argo*,🚀 手动切换
+
   - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-,🚀 手动切换
   - DOMAIN-KEYWORD,dualstack.apiproxy-,🚀 手动切换
   - DOMAIN-KEYWORD,netflixdnstest,🚀 手动切换
@@ -1109,25 +1086,6 @@ rules:
   - DOMAIN-SUFFIX,nflximg.net,🚀 手动切换
   - DOMAIN-SUFFIX,nflxso.net,🚀 手动切换
   - DOMAIN-SUFFIX,nflxvideo.net,🚀 手动切换
-  - IP-CIDR,8.41.4.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,23.246.0.0/18,🚀 手动切换,no-resolve
-  - IP-CIDR,37.77.184.0/21,🚀 手动切换,no-resolve
-  - IP-CIDR,38.72.126.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,45.57.0.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,64.120.128.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,66.197.128.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,69.53.224.0/19,🚀 手动切换,no-resolve
-  - IP-CIDR,103.87.204.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,108.175.32.0/20,🚀 手动切换,no-resolve
-  - IP-CIDR,185.2.220.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,185.9.188.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,192.173.64.0/18,🚀 手动切换,no-resolve
-  - IP-CIDR,198.38.96.0/19,🚀 手动切换,no-resolve
-  - IP-CIDR,198.45.48.0/20,🚀 手动切换,no-resolve
-  - IP-CIDR,203.75.84.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,207.45.72.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,208.75.76.0/22,🚀 手动切换,no-resolve
-#   - USER-AGENT,Niconico*,🚀 手动切换
   - DOMAIN-SUFFIX,dmc.nico,🚀 手动切换
   - DOMAIN-SUFFIX,nicovideo.jp,🚀 手动切换
   - DOMAIN-SUFFIX,nimg.jp,🚀 手动切换
@@ -1165,20 +1123,20 @@ rules:
   - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🚀 手动切换
   - DOMAIN-SUFFIX,sentry.io,🚀 手动切换
   - DOMAIN-SUFFIX,stripe.com,🚀 手动切换
-#   - USER-AGENT,PBS*,🚀 手动切换
+
   - DOMAIN-SUFFIX,pbs.org,🚀 手动切换
-#   - USER-AGENT,Pandora*,🚀 手动切换
+
   - DOMAIN-SUFFIX,pandora.com,🚀 手动切换
   - DOMAIN-SUFFIX,phncdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,phprcdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,pornhub.com,🚀 手动切换
   - DOMAIN-SUFFIX,pornhubpremium.com,🚀 手动切换
   - DOMAIN-SUFFIX,qobuz.com,🚀 手动切换
-#   - USER-AGENT,SoundCloud*,🚀 手动切换
+
   - DOMAIN-SUFFIX,p-cdn.us,🚀 手动切换
   - DOMAIN-SUFFIX,sndcdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,soundcloud.com,🚀 手动切换
-#   - USER-AGENT,Spotify*,🚀 手动切换
+
   - DOMAIN-KEYWORD,-spotify-,🚀 手动切换
   - DOMAIN-KEYWORD,spotify.com,🚀 手动切换
   - DOMAIN-SUFFIX,pscdn.co,🚀 手动切换
@@ -1187,14 +1145,14 @@ rules:
   - DOMAIN-SUFFIX,spotify.com,🚀 手动切换
   - DOMAIN-SUFFIX,spotifycdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,spotifycdn.net,🚀 手动切换
-#   - USER-AGENT,TIDAL*,🚀 手动切换
+
   - DOMAIN-SUFFIX,tidal-cms.s3.amazonaws.com,🚀 手动切换
   - DOMAIN-SUFFIX,tidal.com,🚀 手动切换
   - DOMAIN-SUFFIX,tidalhifi.com,🚀 手动切换
-#   - USER-AGENT,TaiwanGood*,🚀 手动切换
+
   - DOMAIN,hamifans.emome.net,🚀 手动切换
   - DOMAIN-SUFFIX,skyking.com.tw,🚀 手动切换
-#   - USER-AGENT,TikTok*,🚀 手动切换
+
   - DOMAIN-KEYWORD,tiktokcdn,🚀 手动切换
   - DOMAIN-SUFFIX,byteoversea.com,🚀 手动切换
   - DOMAIN-SUFFIX,ibytedtos.com,🚀 手动切换
@@ -1212,10 +1170,6 @@ rules:
   - DOMAIN-SUFFIX,twitch-ext.rootonline.de,🚀 手动切换
   - DOMAIN-SUFFIX,twitch.tv,🚀 手动切换
   - DOMAIN-SUFFIX,twitchcdn.net,🚀 手动切换
-#   - USER-AGENT,Viu*,🚀 手动切换
-  - PROCESS-NAME,com.viu.pad,🚀 手动切换
-  - PROCESS-NAME,com.viu.phone,🚀 手动切换
-  - PROCESS-NAME,com.vuclip.viu,🚀 手动切换
   - DOMAIN,api.viu.now.com,🚀 手动切换
   - DOMAIN,d1k2us671qcoau.cloudfront.net,🚀 手动切换
   - DOMAIN,d2anahhhmp1ffz.cloudfront.net,🚀 手动切换
@@ -1228,9 +1182,6 @@ rules:
   - DOMAIN-SUFFIX,viu.com,🚀 手动切换
   - DOMAIN-SUFFIX,viu.now.com,🚀 手动切换
   - DOMAIN-SUFFIX,viu.tv,🚀 手动切换
-#   - USER-AGENT,*youtube*,🚀 手动切换
-#   - USER-AGENT,YouTube*,🚀 手动切换
-#   - USER-AGENT,com.google.ios.youtube*,🚀 手动切换
   - DOMAIN-KEYWORD,youtube,🚀 手动切换
   - DOMAIN,youtubei.googleapis.com,🚀 手动切换
   - DOMAIN,yt3.ggpht.com,🚀 手动切换
@@ -1404,21 +1355,6 @@ rules:
   - DOMAIN-SUFFIX,amazon.co.jp,🚀 手动切换
   - DOMAIN-SUFFIX,amazon.com,🚀 手动切换
   - DOMAIN-SUFFIX,amazonaws.com,🚀 手动切换
-  - IP-CIDR,13.32.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,13.35.0.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,18.184.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,18.194.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,18.208.0.0/13,🚀 手动切换,no-resolve
-  - IP-CIDR,18.232.0.0/14,🚀 手动切换,no-resolve
-  - IP-CIDR,52.58.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,52.74.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,52.77.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,52.84.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,52.200.0.0/13,🚀 手动切换,no-resolve
-  - IP-CIDR,54.93.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,54.156.0.0/14,🚀 手动切换,no-resolve
-  - IP-CIDR,54.226.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,54.230.156.0/22,🚀 手动切换,no-resolve
   - DOMAIN-KEYWORD,uk-live,🚀 手动切换
   - DOMAIN-SUFFIX,bbc.co,🚀 手动切换
   - DOMAIN-SUFFIX,bbc.com,🚀 手动切换
@@ -1452,20 +1388,6 @@ rules:
   - DOMAIN-SUFFIX,fb.me,🚀 手动切换
   - DOMAIN-SUFFIX,fbcdn.com,🚀 手动切换
   - DOMAIN-SUFFIX,fbcdn.net,🚀 手动切换
-  - IP-CIDR,31.13.24.0/21,🚀 手动切换,no-resolve
-  - IP-CIDR,31.13.64.0/18,🚀 手动切换,no-resolve
-  - IP-CIDR,45.64.40.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,66.220.144.0/20,🚀 手动切换,no-resolve
-  - IP-CIDR,69.63.176.0/20,🚀 手动切换,no-resolve
-  - IP-CIDR,69.171.224.0/19,🚀 手动切换,no-resolve
-  - IP-CIDR,74.119.76.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,103.4.96.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,129.134.0.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,157.240.0.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,173.252.64.0/18,🚀 手动切换,no-resolve
-  - IP-CIDR,179.60.192.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,185.60.216.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,204.15.20.0/22,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,github.com,🚀 手动切换
   - DOMAIN-SUFFIX,github.io,🚀 手动切换
   - DOMAIN-SUFFIX,githubapp.com,🚀 手动切换
@@ -1491,38 +1413,12 @@ rules:
   - DOMAIN-SUFFIX,youtube.com,🚀 手动切换
   - DOMAIN-SUFFIX,yt.be,🚀 手动切换
   - DOMAIN-SUFFIX,ytimg.com,🚀 手动切换
-  - IP-CIDR,74.125.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,173.194.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,120.232.181.162/32,🚀 手动切换,no-resolve
-  - IP-CIDR,120.241.147.226/32,🚀 手动切换,no-resolve
-  - IP-CIDR,120.253.253.226/32,🚀 手动切换,no-resolve
-  - IP-CIDR,120.253.255.162/32,🚀 手动切换,no-resolve
-  - IP-CIDR,120.253.255.34/32,🚀 手动切换,no-resolve
-  - IP-CIDR,120.253.255.98/32,🚀 手动切换,no-resolve
-  - IP-CIDR,180.163.150.162/32,🚀 手动切换,no-resolve
-  - IP-CIDR,180.163.150.34/32,🚀 手动切换,no-resolve
-  - IP-CIDR,180.163.151.162/32,🚀 手动切换,no-resolve
-  - IP-CIDR,180.163.151.34/32,🚀 手动切换,no-resolve
-  - IP-CIDR,203.208.39.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,203.208.40.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,203.208.41.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,203.208.43.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,203.208.50.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,220.181.174.162/32,🚀 手动切换,no-resolve
-  - IP-CIDR,220.181.174.226/32,🚀 手动切换,no-resolve
-  - IP-CIDR,220.181.174.34/32,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,cdninstagram.com,🚀 手动切换
   - DOMAIN-SUFFIX,instagram.com,🚀 手动切换
   - DOMAIN-SUFFIX,instagr.am,🚀 手动切换
   - DOMAIN-SUFFIX,kakao.com,🚀 手动切换
   - DOMAIN-SUFFIX,kakao.co.kr,🚀 手动切换
   - DOMAIN-SUFFIX,kakaocdn.net,🚀 手动切换
-  - IP-CIDR,1.201.0.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,27.0.236.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,103.27.148.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,103.246.56.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,110.76.140.0/22,🚀 手动切换,no-resolve
-  - IP-CIDR,113.61.104.0/22,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,lin.ee,🚀 手动切换
   - DOMAIN-SUFFIX,line-apps.com,🚀 手动切换
   - DOMAIN-SUFFIX,line-cdn.net,🚀 手动切换
@@ -1530,14 +1426,6 @@ rules:
   - DOMAIN-SUFFIX,line.me,🚀 手动切换
   - DOMAIN-SUFFIX,line.naver.jp,🚀 手动切换
   - DOMAIN-SUFFIX,nhncorp.jp,🚀 手动切换
-  - IP-CIDR,103.2.28.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,103.2.30.0/23,🚀 手动切换,no-resolve
-  - IP-CIDR,119.235.224.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,119.235.232.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,119.235.235.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,119.235.236.0/23,🚀 手动切换,no-resolve
-  - IP-CIDR,147.92.128.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,203.104.128.0/19,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,openai.com,🚀 手动切换
   - DOMAIN-SUFFIX,challenges.cloudflare.com,🚀 手动切换
   - DOMAIN-SUFFIX,ai.com,🚀 手动切换
@@ -1615,21 +1503,6 @@ rules:
   - DOMAIN-SUFFIX,tdesktop.com,🚀 手动切换
   - DOMAIN-SUFFIX,terabox.com,🚀 手动切换
   - DOMAIN-SUFFIX,teraboxcdn.com,🚀 手动切换
-  - IP-CIDR,18.194.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,34.224.0.0/12,🚀 手动切换,no-resolve
-  - IP-CIDR,54.242.0.0/15,🚀 手动切换,no-resolve
-  - IP-CIDR,50.22.198.204/30,🚀 手动切换,no-resolve
-  - IP-CIDR,208.43.122.128/27,🚀 手动切换,no-resolve
-  - IP-CIDR,108.168.174.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,173.192.231.32/27,🚀 手动切换,no-resolve
-  - IP-CIDR,158.85.5.192/27,🚀 手动切换,no-resolve
-  - IP-CIDR,174.37.243.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,158.85.46.128/27,🚀 手动切换,no-resolve
-  - IP-CIDR,173.192.222.160/27,🚀 手动切换,no-resolve
-  - IP-CIDR,184.173.128.0/17,🚀 手动切换,no-resolve
-  - IP-CIDR,158.85.224.160/27,🚀 手动切换,no-resolve
-  - IP-CIDR,75.126.150.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,69.171.235.0/16,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,mediawiki.org,🚀 手动切换
   - DOMAIN-SUFFIX,wikibooks.org,🚀 手动切换
   - DOMAIN-SUFFIX,wikidata.org,🚀 手动切换
@@ -1688,9 +1561,9 @@ rules:
   - IP-CIDR6,2001:b28:f23c::/47,📲 电报消息
   - IP-CIDR6,2001:b28:f23f::/48,📲 电报消息
   - IP-CIDR6,2a0a:f280::/32,📲 电报消息
-  - PROCESS-NAME,nekox.messenger,📲 电报消息
-  - PROCESS-NAME,org.telegram.messenger,📲 电报消息
-  - PROCESS-NAME,telegram.exe,📲 电报消息
+
+
+
 # 直连列表
 # 直连列表
 # 直连列表
@@ -1710,34 +1583,7 @@ rules:
   - DOMAIN-KEYWORD,xlliveud,DIRECT
   - DOMAIN-KEYWORD,xunlei,DIRECT
   - DOMAIN-KEYWORD,yunpan,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,aria2c.exe,DIRECT
-  - PROCESS-NAME,baidunetdisk.exe,DIRECT
-  - PROCESS-NAME,bitcomet,DIRECT
-  - PROCESS-NAME,bitcomet.exe,DIRECT
-  - PROCESS-NAME,bitcomet_x64.exe,DIRECT
-  - PROCESS-NAME,downloadservice,DIRECT
-  - PROCESS-NAME,downloadservice.exe,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,fdm.exe,DIRECT
-  - PROCESS-NAME,folx,DIRECT
-  - PROCESS-NAME,folx.exe,DIRECT
-  - PROCESS-NAME,nettransport,DIRECT
-  - PROCESS-NAME,nettransport.exe,DIRECT
-  - PROCESS-NAME,qbittorrent,DIRECT
-  - PROCESS-NAME,qbittorrent.exe,DIRECT
-  - PROCESS-NAME,thunder,DIRECT
-  - PROCESS-NAME,thunder.exe,DIRECT
-  - PROCESS-NAME,transmission,DIRECT
-  - PROCESS-NAME,transmission.exe,DIRECT
-  - PROCESS-NAME,utorrent,DIRECT
-  - PROCESS-NAME,utorrent.exe,DIRECT
-  - PROCESS-NAME,webtorrent,DIRECT
-  - PROCESS-NAME,webtorrent.exe,DIRECT
-  - PROCESS-NAME,webtorrenthelper,DIRECT
-  - PROCESS-NAME,webtorrenthelper.exe,DIRECT
-  - PROCESS-NAME,weiyun,DIRECT
-  - PROCESS-NAME,weiyun.exe,DIRECT
+
 # Google China
   - DOMAIN-SUFFIX,265.com,DIRECT
   - DOMAIN-SUFFIX,2mdn.net,DIRECT
@@ -2123,14 +1969,6 @@ rules:
   - DOMAIN-SUFFIX,zmzapi.net,DIRECT
   - DOMAIN-SUFFIX,zmzfile.com,DIRECT
   - DOMAIN-SUFFIX,teamviewer.com,DIRECT
-  - IP-CIDR,139.220.243.27/32,DIRECT,no-resolve
-  - IP-CIDR,172.16.102.56/32,DIRECT,no-resolve
-  - IP-CIDR,185.188.32.1/28,DIRECT,no-resolve
-  - IP-CIDR,221.226.128.146/32,DIRECT,no-resolve
-  - IP-CIDR6,2a0b:b580::/48,DIRECT,no-resolve
-  - IP-CIDR6,2a0b:b581::/48,DIRECT,no-resolve
-  - IP-CIDR6,2a0b:b582::/48,DIRECT,no-resolve
-  - IP-CIDR6,2a0b:b583::/48,DIRECT,no-resolve
   - DOMAIN-SUFFIX,baomitu.com,DIRECT
   - DOMAIN-SUFFIX,bootcss.com,DIRECT
   - DOMAIN-SUFFIX,jiasule.com,DIRECT
@@ -2139,7 +1977,6 @@ rules:
   - DOMAIN-SUFFIX,doh.pub,DIRECT
   - DOMAIN-SUFFIX,dns.alidns.com,DIRECT
   - DOMAIN-SUFFIX,doh.360.cn,DIRECT
-  - IP-CIDR,1.12.12.12/32,DIRECT,no-resolve
   - DOMAIN-SUFFIX,10010.com,DIRECT
   - DOMAIN-SUFFIX,115.com,DIRECT
   - DOMAIN-SUFFIX,12306.com,DIRECT
@@ -2380,237 +2217,11 @@ rules:
   - DOMAIN-SUFFIX,zhimg.com,DIRECT
   - DOMAIN-SUFFIX,zhongsou.com,DIRECT
   - DOMAIN-SUFFIX,zhuihd.com,DIRECT
-# 中国云服务商ip端
-# 阿里
-# 腾讯 qq
-# 百度 Baidu
-# 华为 huwei
-# 网易 NetEase
-# 360
-  - IP-CIDR,8.128.0.0/10,DIRECT,no-resolve
-  - IP-CIDR,8.208.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,14.1.112.0/22,DIRECT,no-resolve
-  - IP-CIDR,41.222.240.0/22,DIRECT,no-resolve
-  - IP-CIDR,41.223.119.0/24,DIRECT,no-resolve
-  - IP-CIDR,43.242.168.0/22,DIRECT,no-resolve
-  - IP-CIDR,45.112.212.0/22,DIRECT,no-resolve
-  - IP-CIDR,47.52.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,47.56.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,47.74.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,47.76.0.0/14,DIRECT,no-resolve
-  - IP-CIDR,47.80.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,47.235.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,47.236.0.0/14,DIRECT,no-resolve
-  - IP-CIDR,47.240.0.0/14,DIRECT,no-resolve
-  - IP-CIDR,47.244.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,47.246.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,47.250.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,47.252.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,47.254.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,59.82.0.0/20,DIRECT,no-resolve
-  - IP-CIDR,59.82.240.0/21,DIRECT,no-resolve
-  - IP-CIDR,59.82.248.0/22,DIRECT,no-resolve
-  - IP-CIDR,72.254.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,103.38.56.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.52.76.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.206.40.0/22,DIRECT,no-resolve
-  - IP-CIDR,110.76.21.0/24,DIRECT,no-resolve
-  - IP-CIDR,110.76.23.0/24,DIRECT,no-resolve
-  - IP-CIDR,112.125.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,116.251.64.0/18,DIRECT,no-resolve
-  - IP-CIDR,119.38.208.0/20,DIRECT,no-resolve
-  - IP-CIDR,119.38.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,119.42.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,139.95.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,140.205.1.0/24,DIRECT,no-resolve
-  - IP-CIDR,140.205.122.0/24,DIRECT,no-resolve
-  - IP-CIDR,147.139.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,149.129.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,155.102.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,161.117.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,163.181.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,170.33.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,198.11.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,205.204.96.0/19,DIRECT,no-resolve
-  - IP-CIDR,19.28.0.0/23,DIRECT,no-resolve
-  - IP-CIDR,45.40.192.0/19,DIRECT,no-resolve
-  - IP-CIDR,49.51.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,62.234.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,94.191.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,103.7.28.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.116.50.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.231.60.0/24,DIRECT,no-resolve
-  - IP-CIDR,109.244.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,111.30.128.0/21,DIRECT,no-resolve
-  - IP-CIDR,111.30.136.0/24,DIRECT,no-resolve
-  - IP-CIDR,111.30.139.0/24,DIRECT,no-resolve
-  - IP-CIDR,111.30.140.0/23,DIRECT,no-resolve
-  - IP-CIDR,115.159.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,119.28.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,120.88.56.0/23,DIRECT,no-resolve
-  - IP-CIDR,121.51.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,129.28.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,129.204.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,129.211.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,132.232.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,134.175.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,146.56.192.0/18,DIRECT,no-resolve
-  - IP-CIDR,148.70.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,150.109.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,152.136.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,162.14.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,162.62.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,170.106.130.0/24,DIRECT,no-resolve
-  - IP-CIDR,182.254.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,188.131.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,203.195.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,203.205.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,210.4.138.0/24,DIRECT,no-resolve
-  - IP-CIDR,211.152.128.0/23,DIRECT,no-resolve
-  - IP-CIDR,211.152.132.0/23,DIRECT,no-resolve
-  - IP-CIDR,211.152.148.0/23,DIRECT,no-resolve
-  - IP-CIDR,212.64.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,212.129.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,45.113.192.0/22,DIRECT,no-resolve
-  - IP-CIDR,63.217.23.0/24,DIRECT,no-resolve
-  - IP-CIDR,63.243.252.0/24,DIRECT,no-resolve
-  - IP-CIDR,103.235.44.0/22,DIRECT,no-resolve
-  - IP-CIDR,104.193.88.0/22,DIRECT,no-resolve
-  - IP-CIDR,106.12.0.0/15,DIRECT,no-resolve
-  - IP-CIDR,114.28.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,119.63.192.0/21,DIRECT,no-resolve
-  - IP-CIDR,180.76.0.0/24,DIRECT,no-resolve
-  - IP-CIDR,180.76.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,182.61.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,185.10.104.0/22,DIRECT,no-resolve
-  - IP-CIDR,202.46.48.0/20,DIRECT,no-resolve
-  - IP-CIDR,203.90.238.0/24,DIRECT,no-resolve
-  - IP-CIDR,43.254.0.0/22,DIRECT,no-resolve
-  - IP-CIDR,45.249.212.0/22,DIRECT,no-resolve
-  - IP-CIDR,49.4.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,78.101.192.0/19,DIRECT,no-resolve
-  - IP-CIDR,78.101.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,81.52.161.0/24,DIRECT,no-resolve
-  - IP-CIDR,85.97.220.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.31.200.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.69.140.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.218.216.0/22,DIRECT,no-resolve
-  - IP-CIDR,114.115.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,114.116.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,116.63.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,116.66.184.0/22,DIRECT,no-resolve
-  - IP-CIDR,116.71.96.0/20,DIRECT,no-resolve
-  - IP-CIDR,116.71.128.0/21,DIRECT,no-resolve
-  - IP-CIDR,116.71.136.0/22,DIRECT,no-resolve
-  - IP-CIDR,116.71.141.0/24,DIRECT,no-resolve
-  - IP-CIDR,116.71.142.0/24,DIRECT,no-resolve
-  - IP-CIDR,116.71.243.0/24,DIRECT,no-resolve
-  - IP-CIDR,116.71.244.0/24,DIRECT,no-resolve
-  - IP-CIDR,116.71.251.0/24,DIRECT,no-resolve
-  - IP-CIDR,117.78.0.0/18,DIRECT,no-resolve
-  - IP-CIDR,119.3.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,119.8.0.0/21,DIRECT,no-resolve
-  - IP-CIDR,119.8.32.0/19,DIRECT,no-resolve
-  - IP-CIDR,121.36.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,121.36.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,121.37.0.0/17,DIRECT,no-resolve
-  - IP-CIDR,122.112.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,139.9.0.0/18,DIRECT,no-resolve
-  - IP-CIDR,139.9.64.0/19,DIRECT,no-resolve
-  - IP-CIDR,139.9.100.0/22,DIRECT,no-resolve
-  - IP-CIDR,139.9.104.0/21,DIRECT,no-resolve
-  - IP-CIDR,139.9.112.0/20,DIRECT,no-resolve
-  - IP-CIDR,139.9.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,139.9.192.0/19,DIRECT,no-resolve
-  - IP-CIDR,139.9.224.0/20,DIRECT,no-resolve
-  - IP-CIDR,139.9.240.0/21,DIRECT,no-resolve
-  - IP-CIDR,139.9.248.0/22,DIRECT,no-resolve
-  - IP-CIDR,139.159.128.0/19,DIRECT,no-resolve
-  - IP-CIDR,139.159.160.0/22,DIRECT,no-resolve
-  - IP-CIDR,139.159.164.0/23,DIRECT,no-resolve
-  - IP-CIDR,139.159.168.0/21,DIRECT,no-resolve
-  - IP-CIDR,139.159.176.0/20,DIRECT,no-resolve
-  - IP-CIDR,139.159.192.0/18,DIRECT,no-resolve
-  - IP-CIDR,159.138.0.0/18,DIRECT,no-resolve
-  - IP-CIDR,159.138.64.0/21,DIRECT,no-resolve
-  - IP-CIDR,159.138.79.0/24,DIRECT,no-resolve
-  - IP-CIDR,159.138.80.0/20,DIRECT,no-resolve
-  - IP-CIDR,159.138.96.0/20,DIRECT,no-resolve
-  - IP-CIDR,159.138.112.0/21,DIRECT,no-resolve
-  - IP-CIDR,159.138.125.0/24,DIRECT,no-resolve
-  - IP-CIDR,159.138.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,159.138.192.0/20,DIRECT,no-resolve
-  - IP-CIDR,159.138.223.0/24,DIRECT,no-resolve
-  - IP-CIDR,159.138.224.0/19,DIRECT,no-resolve
-  - IP-CIDR,168.195.92.0/22,DIRECT,no-resolve
-  - IP-CIDR,185.176.76.0/22,DIRECT,no-resolve
-  - IP-CIDR,197.199.0.0/18,DIRECT,no-resolve
-  - IP-CIDR,197.210.163.0/24,DIRECT,no-resolve
-  - IP-CIDR,197.252.1.0/24,DIRECT,no-resolve
-  - IP-CIDR,197.252.2.0/23,DIRECT,no-resolve
-  - IP-CIDR,197.252.4.0/22,DIRECT,no-resolve
-  - IP-CIDR,197.252.8.0/21,DIRECT,no-resolve
-  - IP-CIDR,200.32.52.0/24,DIRECT,no-resolve
-  - IP-CIDR,200.32.54.0/24,DIRECT,no-resolve
-  - IP-CIDR,200.32.57.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.0.0/22,DIRECT,no-resolve
-  - IP-CIDR,203.135.4.0/23,DIRECT,no-resolve
-  - IP-CIDR,203.135.8.0/23,DIRECT,no-resolve
-  - IP-CIDR,203.135.11.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.13.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.20.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.22.0/23,DIRECT,no-resolve
-  - IP-CIDR,203.135.24.0/23,DIRECT,no-resolve
-  - IP-CIDR,203.135.26.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.29.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.33.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.38.0/23,DIRECT,no-resolve
-  - IP-CIDR,203.135.40.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.43.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.48.0/24,DIRECT,no-resolve
-  - IP-CIDR,203.135.50.0/24,DIRECT,no-resolve
-  - IP-CIDR,42.186.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,45.127.128.0/22,DIRECT,no-resolve
-  - IP-CIDR,45.195.24.0/24,DIRECT,no-resolve
-  - IP-CIDR,45.253.132.0/22,DIRECT,no-resolve
-  - IP-CIDR,45.253.240.0/22,DIRECT,no-resolve
-  - IP-CIDR,45.254.48.0/23,DIRECT,no-resolve
-  - IP-CIDR,59.111.0.0/20,DIRECT,no-resolve
-  - IP-CIDR,59.111.128.0/17,DIRECT,no-resolve
-  - IP-CIDR,103.71.120.0/21,DIRECT,no-resolve
-  - IP-CIDR,103.71.128.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.71.196.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.71.200.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.72.12.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.72.18.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.72.24.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.72.28.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.72.38.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.72.40.0/23,DIRECT,no-resolve
-  - IP-CIDR,103.72.44.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.72.48.0/21,DIRECT,no-resolve
-  - IP-CIDR,103.72.128.0/21,DIRECT,no-resolve
-  - IP-CIDR,103.74.24.0/21,DIRECT,no-resolve
-  - IP-CIDR,103.74.48.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.126.92.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.129.252.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.131.252.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.135.240.0/22,DIRECT,no-resolve
-  - IP-CIDR,103.196.64.0/22,DIRECT,no-resolve
-  - IP-CIDR,106.2.32.0/19,DIRECT,no-resolve
-  - IP-CIDR,106.2.64.0/18,DIRECT,no-resolve
-  - IP-CIDR,114.113.196.0/22,DIRECT,no-resolve
-  - IP-CIDR,114.113.200.0/22,DIRECT,no-resolve
-  - IP-CIDR,115.236.112.0/20,DIRECT,no-resolve
-  - IP-CIDR,115.238.76.0/22,DIRECT,no-resolve
-  - IP-CIDR,123.58.160.0/19,DIRECT,no-resolve
-  - IP-CIDR,223.252.192.0/19,DIRECT,no-resolve
-  - IP-CIDR,101.198.128.0/18,DIRECT,no-resolve
-  - IP-CIDR,101.198.192.0/19,DIRECT,no-resolve
-  - IP-CIDR,101.199.196.0/22,DIRECT,no-resolve
   - DOMAIN-SUFFIX,accounts.firefox.com,DIRECT
   - DOMAIN-SUFFIX,sync.services.mozilla.com,DIRECT
+  - DOMAIN-SUFFIX,push.services.mozilla.com,DIRECT
   - IP-CIDR,35.186.227.140/32,DIRECT
+  - IP-CIDR,34.117.65.55/32,DIRECT
   - DOMAIN-KEYWORD,mozilla,DIRECT
   - DOMAIN-KEYWORD,firefox,DIRECT
   - DOMAIN-KEYWORD,zhaoziyuan,DIRECT
