@@ -1,8 +1,9 @@
 
 rules:
-#NSFW分流
+#NSFW分流               #23.8.28 优化了火狐浏览器和telegram的规则 
 #站点大多会做区域限制,类似禁日本ip
-#规则未去重,有问题的话多看链接/日志     
+#规则未去重,有问题的话多看链接/日志 
+
   - DOMAIN-KEYWORD,akamai,🎯 R18
   - DOMAIN-KEYWORD,btsow,🎯 R18
   - DOMAIN-KEYWORD,dyncdn,🎯 R18
@@ -12,6 +13,7 @@ rules:
   - DOMAIN-KEYWORD,mikanani,🎯 R18
   - DOMAIN-KEYWORD,-plus,🎯 R18
   - DOMAIN-KEYWORD,porn,🎯 R18
+  - DOMAIN-KEYWORD,pica,🎯 R18
   - DOMAIN-KEYWORD,rarbg,🎯 R18
   - DOMAIN-KEYWORD,sjhs,🎯 R18
   - DOMAIN-KEYWORD,xvideo,🎯 R18
@@ -68,6 +70,7 @@ rules:
   - DOMAIN-SUFFIX,ofdb.de,🎯 R18
   - DOMAIN-SUFFIX,omdbapi.com,🎯 R18
   - DOMAIN-SUFFIX,orgasm.com,🎯 R18
+  - DOMAIN-SUFFIX,picacomic.com,🎯 R18
   - DOMAIN-SUFFIX,porn.biz,🎯 R18
   - DOMAIN-SUFFIX,porn.com,🎯 R18
   - DOMAIN-SUFFIX,porn300.com,🎯 R18
@@ -139,7 +142,6 @@ rules:
   - IP-CIDR,35.241.9.150/32,🎯 R18
   - IP-CIDR,54.188.40.0/32,🎯 R18
   - IP-CIDR,44.228.49.203/32,🎯 R18
-  - IP-CIDR,35.186.227.140/32,🎯 R18
 #海外分流
 #海外分流
 #海外分流
@@ -774,6 +776,7 @@ rules:
   - DOMAIN-SUFFIX,revolv.com,🚀 手动切换
   - DOMAIN-SUFFIX,ridepenguin.com,🚀 手动切换
   - DOMAIN-SUFFIX,run.app,🚀 手动切换
+  - DOMAIN-SUFFIX,rutracker.org,🚀 手动切换
   - DOMAIN-SUFFIX,savethedate.foo,🚀 手动切换
   - DOMAIN-SUFFIX,saynow.com,🚀 手动切换
   - DOMAIN-SUFFIX,scanservice1.qatp1.net,🚀 手动切换
@@ -818,6 +821,7 @@ rules:
   - DOMAIN-SUFFIX,useplannr.com,🚀 手动切换
   - DOMAIN-SUFFIX,usvimosquito.com,🚀 手动切换
   - DOMAIN-SUFFIX,usvimosquitoproject.com,🚀 手动切换
+  - DOMAIN-SUFFIX,v2rayse.com,🚀 手动切换
   - DOMAIN-SUFFIX,v8.dev,🚀 手动切换
   - DOMAIN-SUFFIX,v8project.org,🚀 手动切换
   - DOMAIN-SUFFIX,velostrata.com,🚀 手动切换
@@ -1285,7 +1289,6 @@ rules:
   - DOMAIN-KEYWORD,porn,🚀 手动切换
   - DOMAIN-KEYWORD,sci-hub,🚀 手动切换
   - DOMAIN-KEYWORD,spotify,🚀 手动切换
-  - DOMAIN-KEYWORD,telegram,🚀 手动切换
   - DOMAIN-KEYWORD,twitter,🚀 手动切换
   - DOMAIN-KEYWORD,whatsapp,🚀 手动切换
   - DOMAIN-KEYWORD,youtube,🚀 手动切换
@@ -1610,16 +1613,6 @@ rules:
   - DOMAIN-SUFFIX,twimg.org,🚀 手动切换
   - DOMAIN-SUFFIX,t.me,🚀 手动切换
   - DOMAIN-SUFFIX,tdesktop.com,🚀 手动切换
-  - DOMAIN-SUFFIX,telegra.ph,🚀 手动切换
-  - DOMAIN-SUFFIX,telegram.me,🚀 手动切换
-  - DOMAIN-SUFFIX,telegram.org,🚀 手动切换
-  - DOMAIN-SUFFIX,telesco.pe,🚀 手动切换
-  - IP-CIDR,91.108.0.0/16,🚀 手动切换,no-resolve
-  - IP-CIDR,109.239.140.0/24,🚀 手动切换,no-resolve
-  - IP-CIDR,149.154.160.0/20,🚀 手动切换,no-resolve
-  - IP-CIDR6,2001:67c:4e8::/48,🚀 手动切换,no-resolve
-  - IP-CIDR6,2001:b28:f23d::/48,🚀 手动切换,no-resolve
-  - IP-CIDR6,2001:b28:f23f::/48,🚀 手动切换,no-resolve
   - DOMAIN-SUFFIX,terabox.com,🚀 手动切换
   - DOMAIN-SUFFIX,teraboxcdn.com,🚀 手动切换
   - IP-CIDR,18.194.0.0/15,🚀 手动切换,no-resolve
@@ -1685,6 +1678,7 @@ rules:
   - DOMAIN-SUFFIX,tx.me,📲 电报消息
   - DOMAIN-SUFFIX,usercontent.dev,📲 电报消息
   - DOMAIN-KEYWORD,nicegram,📲 电报消息
+  - IP-CIDR,91.108.56.160/32,📲 电报消息
   - IP-CIDR,109.239.140.0/24,📲 电报消息
   - IP-CIDR,149.154.160.0/20,📲 电报消息
   - IP-CIDR,5.28.195.163/32,📲 电报消息
@@ -2614,7 +2608,11 @@ rules:
   - IP-CIDR,101.198.128.0/18,DIRECT,no-resolve
   - IP-CIDR,101.198.192.0/19,DIRECT,no-resolve
   - IP-CIDR,101.199.196.0/22,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,accounts.firefox.com,DIRECT
+  - DOMAIN-SUFFIX,sync.services.mozilla.com,DIRECT
+  - IP-CIDR,35.186.227.140/32,DIRECT
   - DOMAIN-KEYWORD,mozilla,DIRECT
   - DOMAIN-KEYWORD,firefox,DIRECT
+  - DOMAIN-KEYWORD,zhaoziyuan,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
