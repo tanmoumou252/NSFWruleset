@@ -1,3 +1,7 @@
+[🍞English version](https://github.com/tanmoumou252/NSFWruleset#english-version)[🍞Safe offline conversion](https://github.com/tanmoumou252/NSFWruleset/blob/main/sub2clash-readme.md#english)[🍞sub2clash direct link](https://github.com/nitezs/sub2clash)
+
+[🍘中文版本](https://github.com/tanmoumou252/NSFWruleset#%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E7%89%88%E6%9C%AC)[🍘本地clash订阅转换的介绍](https://github.com/tanmoumou252/NSFWruleset/blob/main/sub2clash-readme.md#%E4%B8%AD%E6%96%87)[🍘sub2clash直达](https://github.com/nitezs/sub2clash)
+
 # English version
 NSFW-website-rule-for-Clash (Actually it is [CFW](https://github.com/Fndroid/clash_for_windows_pkg),not the [Clash](https://github.com/Dreamacro/clash))   
  I'm new here,and still learning how it work.   
