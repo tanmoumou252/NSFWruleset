@@ -1,0 +1,1 @@
+[#sub2clash](https://github.com/nitezs/sub2clash)
