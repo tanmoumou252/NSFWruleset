@@ -1,6 +1,6 @@
 
 rules:
-#NSFW分流               #23.8.28 优化IP-CIDR  精简PROCESS-NAME  规则 
+#NSFW分流               #23.9.8 优化精简规则 
 #站点大多会做区域限制,类似禁日本ip
 #规则未去重,有问题的话多看链接/日志 
   - DOMAIN-KEYWORD,akamai,🎯 R18
@@ -103,9 +103,11 @@ rules:
   - DOMAIN-SUFFIX,sshs.pw,🎯 R18
   - DOMAIN-SUFFIX,subtitles.org,🎯 R18
   - DOMAIN-SUFFIX,sunporno.com,🎯 R18
+  - DOMAIN-SUFFIX,plexapp.com,🎯 R18
   - DOMAIN-SUFFIX,tastyblacks.com,🎯 R18
   - DOMAIN-SUFFIX,thematureporn.net,🎯 R18
   - DOMAIN-SUFFIX,themoviedb.org,🎯 R18
+  - DOMAIN-SUFFIX,tmdb.org,🎯 R18
   - DOMAIN-SUFFIX,thetvdb.com,🎯 R18
   - DOMAIN-SUFFIX,thumbzilla.com,🎯 R18
   - DOMAIN-SUFFIX,tiava.com,🎯 R18
@@ -1941,6 +1943,7 @@ rules:
   - DOMAIN-SUFFIX,weiyun.com,DIRECT
   - DOMAIN-SUFFIX,appsimg.com,DIRECT
   - DOMAIN-SUFFIX,appvipshop.com,DIRECT
+  - DOMAIN-SUFFIX,mikanime.tv,DIRECT
   - DOMAIN-SUFFIX,vip.com,DIRECT
   - DOMAIN-SUFFIX,vipstatic.com,DIRECT
   - DOMAIN-SUFFIX,ximalaya.com,DIRECT
@@ -2219,7 +2222,6 @@ rules:
   - DOMAIN-SUFFIX,zhuihd.com,DIRECT
   - DOMAIN-SUFFIX,accounts.firefox.com,DIRECT
   - DOMAIN-SUFFIX,sync.services.mozilla.com,DIRECT
-  - DOMAIN-SUFFIX,push.services.mozilla.com,DIRECT
   - IP-CIDR,35.186.227.140/32,DIRECT
   - IP-CIDR,34.117.65.55/32,DIRECT
   - DOMAIN-KEYWORD,mozilla,DIRECT
