@@ -269,8 +269,7 @@ rules:
   - RULE-SET,Bilibili,🎯 全球直连
   - RULE-SET,ChinaMedia,🎯 全球直连
   - RULE-SET,Github,🚀 手动切换
-  - RULE-SET,Developer,🚀 手动切换
-  - RULE-SET,Proxy,🚀 手动切换
+  - RULE-SET,Developer,🚀 手动切换  
   - RULE-SET,China,🎯 全球直连
   - RULE-SET,Direct,🎯 全球直连
   - GEOIP,CN,DIRECT
