@@ -22,7 +22,7 @@ A brief discussion of what is easy to use
 
 > [!IMPORTANT]
 > - Subscription links may have ***&flag=clash*** at the end to indicate that it is a clash subscription.
-> - If it's not there at the end, the link may have a
+> - If it's not there at the end, the link **May contain only one service provider**
 > - If it's not at the end of the link, then the final configuration you generate may only have one VPN provider's services.>
 > - If an individual node needs to appear under a specific proxy-group, write the node's location in the template ahead of generate.
 
