@@ -18,7 +18,7 @@ A brief discussion of what is easy to use
 4. adding *#Provider A* to the subscription link will prepend **Provider A** to the names of all the nodes of that service provider.
 5. auto-generate country proxy-groups, use ***\- \<countries>*** or ***\- \<all>*** to indicate that you only need proxies for one country or you need them all..
 6. you can use your own template to generate the final configuration
-8. See [Original Repo](https://github.com/nitezs/sub2clash/blob/main/README.md#%E9%85%8D%E7%BD%AE) for more parameters.
+8. See [Original Repo](https://github.com/nitezs/sub2clash/blob/main/README.md#%E9%85%8D%E7%BD%AE) or [my sample](https://github.com/tanmoumou252/NSFWruleset/blob/main/sub2clash%E5%B8%A6rule-provider%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md) for more parameters.
 
 > [!IMPORTANT]
 > - Subscription links may have ***&flag=clash*** at the end to indicate that it is a clash subscription.
@@ -46,7 +46,7 @@ A brief discussion of what is easy to use
 4. 在订阅链接后加 *#机场A* 可以在该组所有节点前加上 **机场A**
 5. 自动生成国家策略组,使用 ***\- \<countries>*** 或者 ***\- \<all>*** 表示只需要某个地区的和全都要
 6. 可以使用自己编好的模板生成最终的配置
-8. 更多参数查看[原项目](https://github.com/nitezs/sub2clash/blob/main/README.md#%E9%85%8D%E7%BD%AE)
+8. 更多参数查看[原项目](https://github.com/nitezs/sub2clash/blob/main/README.md#%E9%85%8D%E7%BD%AE)或[我的模板](https://github.com/tanmoumou252/NSFWruleset/blob/main/sub2clash%E5%B8%A6rule-provider%E9%85%8D%E7%BD%AE%E6%A8%A1%E6%9D%BF.md)
 
 > [!IMPORTANT]
 > - 订阅链接在末尾可能会加上 ***&flag=clash*** 来表示这是clash的订阅
