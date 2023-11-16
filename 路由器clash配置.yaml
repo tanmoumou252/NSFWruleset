@@ -1,8 +1,10 @@
 #本配置在clash Padavan 测试通过
 #路由器上管理clash链接,有两个比较受欢迎的第三方页面：http://clash.razord.top/ 、http://yacd.haishan.me/
 #也可以使用clash自带的(ip加clash链接端口 带登录参数访问)
-#坏处就是不能自动更新节点信息,在测试中发现路由器上的clash似乎不支持指定位置的节点组和规则组,指定了就会无法启动clash
-#没什么特殊需要,建议还是导入订阅链接,让云服务器处理规则和节点,或者干脆直接使用机场给的配置
+#搭配使用sub2clash后,也能实现自动更新节点信息,在测试中发现
+#如果配置文件使用了网络的rule-provider,路由器上的clash需要能访问到这个网络url
+#如果url被墙,就会直接导致无法启动clash,建议在国内搭一个镜像的rule-provider,或者开启透明路由代理路由器自身流量再更新rule-provider
+
 
 port: 7890
 socks-port: 7891
