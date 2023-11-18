@@ -1,6 +1,10 @@
-# UPDATED: 2023-11-18 16:38:59
+# UPDATED: 2023-11-19 2:35:49
 
 payload:
+# CDN
+  - DOMAIN-KEYWORD,jsdelivr
+  - DOMAIN-SUFFIX,jsdelivr.net
+  - DOMAIN-SUFFIX,jsdelivr.com
 # Download  
   - DOMAIN-SUFFIX,qbittorrent.org  
   - DOMAIN-KEYWORD,aria2
