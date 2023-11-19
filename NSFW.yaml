@@ -16,6 +16,8 @@ payload:
   - DOMAIN-KEYWORD,xvideo
   - DOMAIN-KEYWORD,zhuri
   - DOMAIN-KEYWORD,freeapp.buzz
+  - DOMAIN-KEYWORD,rutrk.org
+  - DOMAIN-KEYWORD,rutracker
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
@@ -93,6 +95,9 @@ payload:
   - DOMAIN-SUFFIX,proporn.com
   - DOMAIN-SUFFIX,reimu.net
   - DOMAIN-SUFFIX,ryuugames.com
+  - DOMAIN-SUFFIX,yadro.ru
+  - DOMAIN-SUFFIX,rutracker.org
+  - DOMAIN-SUFFIX,rutracker.cc
   - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,sexinsex.net
   - DOMAIN-SUFFIX,sexvid.xxx
