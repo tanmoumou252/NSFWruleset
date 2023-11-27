@@ -189,6 +189,8 @@ payload:
   - DOMAIN-SUFFIX,tools.google.com
   - DOMAIN-SUFFIX,tools.l.google.com
   - DOMAIN-SUFFIX,www-googletagmanager.l.google.com
+# Galgame mtool
+  - DOMAIN-SUFFIX,trs.mtool.app
 # SteamCN
   - DOMAIN,csgo.wmsj.cn
   - DOMAIN,dl.steam.clngaa.com
