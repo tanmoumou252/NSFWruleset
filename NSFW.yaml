@@ -1,4 +1,4 @@
-# UPDATED: 2023-12-03 14:28:51
+# UPDATED: 2023-12-03 22:12:51
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -96,6 +96,8 @@ payload:
   - DOMAIN-SUFFIX,reimu.net
   - DOMAIN-SUFFIX,ryuugames.com
   - DOMAIN-SUFFIX,yadro.ru
+  - DOMAIN-SUFFIX,thepiratebay.org
+  - DOMAIN-SUFFIX,torrindex.net
   - DOMAIN-SUFFIX,rutracker.org
   - DOMAIN-SUFFIX,rutracker.cc
   - DOMAIN-SUFFIX,sehuatang.org
