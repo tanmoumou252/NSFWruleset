@@ -1,4 +1,4 @@
-# UPDATED: 2023-12-03 22:12:51
+# UPDATED: 2023-12-11 19:58:51
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -18,6 +18,8 @@ payload:
   - DOMAIN-KEYWORD,freeapp.buzz
   - DOMAIN-KEYWORD,rutrk.org
   - DOMAIN-KEYWORD,rutracker
+  - DOMAIN-KEYWORD,tmdb
+  - DOMAIN-KEYWORD,themoviedb
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
@@ -119,6 +121,7 @@ payload:
   - DOMAIN-SUFFIX,themoviedb.org
   - DOMAIN-SUFFIX,api.themoviedb.org
   - DOMAIN-SUFFIX,api.tmdb.org
+  - DOMAIN-SUFFIX,image.tmdb.org
   - DOMAIN-SUFFIX,thetvdb.com
   - DOMAIN-SUFFIX,thumbzilla.com
   - DOMAIN-SUFFIX,tiava.com
