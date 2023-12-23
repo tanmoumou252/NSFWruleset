@@ -1,4 +1,4 @@
-# UPDATED: 2023-12-11 19:58:51
+# UPDATED: 2023-12-24 06:30:28
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -69,6 +69,9 @@ payload:
   - DOMAIN-SUFFIX,moeli-desu.com
   - DOMAIN-SUFFIX,moviemeter.nl
   - DOMAIN-SUFFIX,mpdb.tv
+  - DOMAIN-SUFFIX,missav.com
+  - DOMAIN-SUFFIX,myavlive.com
+  - DOMAIN-SUFFIX,missav.recombee.com
   - DOMAIN-SUFFIX,nuvid.com
   - DOMAIN-SUFFIX,nyaa.si
   - DOMAIN-SUFFIX,ofdb.de
