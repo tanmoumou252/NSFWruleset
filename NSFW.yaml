@@ -1,4 +1,4 @@
-# UPDATED: 2023-12-24 06:30:28
+# UPDATED: 2024-01-04 23:18:08
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -151,5 +151,8 @@ payload:
   - DOMAIN-SUFFIX,youporn.com
   - DOMAIN-SUFFIX,zbporn.com
   - DOMAIN-SUFFIX,zooqle.com
+  - DOMAIN-SUFFIX,mrzyx.xyz
+  - DOMAIN-SUFFIX,db.msin.jp
+  - DOMAIN-SUFFIX,img.msin.info
   - PROCESS-NAME,javaw.exe
   - PROCESS-NAME,tinyMediaManager.exe      # /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
