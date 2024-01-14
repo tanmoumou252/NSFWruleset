@@ -1,4 +1,4 @@
-# UPDATED: 2024-01-04 23:18:08
+# UPDATED: 2024-01-14 18:52:20
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -6,6 +6,7 @@ payload:
   - DOMAIN-KEYWORD,btsow
   - DOMAIN-KEYWORD,dyncdn
   - DOMAIN-KEYWORD,fc2
+  - DOMAIN-KEYWORD,xiaojiadianmovie
   - DOMAIN-KEYWORD,hentai
   - DOMAIN-KEYWORD,jav
   - DOMAIN-KEYWORD,mikanani  
@@ -20,6 +21,7 @@ payload:
   - DOMAIN-KEYWORD,rutracker
   - DOMAIN-KEYWORD,tmdb
   - DOMAIN-KEYWORD,themoviedb
+  - DOMAIN-KEYWORD,sb-cd.com
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
