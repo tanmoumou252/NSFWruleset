@@ -23,6 +23,7 @@ A brief discussion of what is easy to use
 > [!IMPORTANT]
 > - Subscription links may have ***&flag=clash*** at the end to indicate that it is a clash subscription.
 > - If it's not at the end of the link, then the final configuration you generate may only have one VPN provider's services.
+> - It has been noticed that some network nodes are missing after conversion, and this could be caused by the service provider's settings or potential issues with the program itself.
 > - If an individual node needs to appear under a specific proxy-group, write the node's location in the template ahead of generate.
 
 
@@ -50,9 +51,8 @@ A brief discussion of what is easy to use
 
 > [!IMPORTANT]
 > - 订阅链接在末尾可能会加上 ***&flag=clash*** 来表示这是clash的订阅
->
 > - 如果末尾没有它,那么你生成的最终配置可能只有单个机场
->
+> - 最近发现转换后部分节点会丢失,这可能和机场配置有关,也可能是程序自身问题
 > - 单个节点要是需要出现在特定的策略组下,就在模板里提前写好该节点的位置
 
  
