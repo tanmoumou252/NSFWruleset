@@ -39,7 +39,7 @@ proxy-providers:
     path: ./Proxy/全球节点.yml
     url:   #填写订阅连接，注意空格
     interval: 3600
-    filter: 香港|🇭🇰️|港|加|日|🇰🇷|韩|🇹🇼|台湾|德|俄|美|🇦🇪|迪拜|越|国  #含有“香港|🇭🇰️|港|加|日|🇰🇷|韩|🇹🇼|台湾|德|俄|美|🇦🇪|迪拜|越|国”的节点才会出现
+    filter: "^(?!.*?[流量|到期|重置]).*?$" #否定式前瞻 基本表达式为^(?!匹配模式),含有流量|到期|重置的节点会被排除
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
@@ -49,7 +49,7 @@ proxy-providers:
     type: file                 #订阅就改http，和上面的全球节点一致，因为上面已经保存过一次订阅文件了，所以直接使用现成的file
     path: ./Proxy/全球节点.yml   
     interval: 3600
-    filter: 倍率0.1             #含有“倍率0.1”的节点才会出现，clash过滤器的功能支持不是太好，所以和上面的一样写的很繁琐，基本靠穷举，排除需要用[^a|b]表示排除含有a或b的节点
+    filter: 倍率0.1             #含有“倍率0.1”的节点才会出现
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
