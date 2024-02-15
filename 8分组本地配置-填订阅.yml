@@ -1,79 +1,126 @@
-port: 10808
-socks-port: 10809
+port: 7890
+socks-port: 7891
+mixed-port: 7893
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 0.0.0.0:1443
 dns:
   enable: true
-  listen: 0.0.0.0:53
+  ipv6: true
+  listen: 0.0.0.0:8053
+  default-nameserver :
+    - 1.1.1.1
+    - 8.8.8.8
   enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16   # if you don't know what it is, don't change it
-  use-hosts: true                # lookup hosts and return IP record
-  nameserver:                     
-    - 8.8.8.8                    # 随便填写你喜欢的DNS
-    - 1.1.1.1                    # cloudflare
-  fallback:                      # 上面的DNS都解析失败则使用下面的DNS                    
-                  
-  fallback-filter: 
-    geoip: true                  # default    
-    ipcidr:                      # ips in these subnets will be considered polluted
+  # 配置不使用fake-ip的域名
+  fake-ip-filter:
+    - '+.*'
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+  nameserver:
+    - 223.5.5.5
+    - 1.1.1.1
+    - 8.8.8.8
+    - 114.114.114.114
+    - 119.29.29.29
+  fallback:   # 与 nameserver 内的服务器列表同时发起请求，当规则符合 GEOIP 在 CN 以外时，fallback 列表内的域名服务器生效。    
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+    - tcp://8.8.8.8:53
+    - tcp://8.8.4.4:53
+    - tcp://208.67.222.222:443
+    - tcp://208.67.220.220:443
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
       - 240.0.0.0/4
-      
-# 建议使用支持语法高亮的编辑软件打开本配置，方便阅读注释
-# interval代表间隔时间，单位为s
-# tolerance代表容差时间，单位为ms
-# 由于分流规则引用了Github文件，如果你的本地网络无法访问Github，你将无法让Clash正常工作。
-# 你需要先使用翻墙工具让本地网络出墙，再启动Clash才能正常下载分流规则并正常启动，待Clahs启动成功并更新完订阅资源和分流规则之后，方可关闭你之前打开的翻墙工具。
-# 请使用节点订阅转换服务将服务商的订阅链接转换为Clash的订阅，并输出为Node List格式。
-# 请使用节点订阅转换工具提供的保留节点和过滤节点功能，生成不同地区的订阅链接，并填入下方proxy-providers区域。
-# Windows下，在CFW根目录建立Data文件夹可将配置文件保留在同文件夹内，而不是保存在%UserName%/.config/clash/
-# 其他内容具体见注释。
-# 节点订阅转换网址 https://api.hope140.cc
+    domain:
+      - '+.google.com'
+      - '+.googleapis.com'
+      - '+.youtube.com'
+      - '+.appspot.com'
+      - '+.telegram.com'
+      - '+.facebook.com'
+      - '+.twitter.com'
+      - '+.blogger.com'
+      - '+.gmail.com'
+      - '+.gvt1.com'
+sniffer:
+  enable: true
+  override-destination: true
+  sniff:
+    http: { ports: [80, 8080] }
+    tls: { ports: [443, 8443] }
+  skip-domain:
+    #Apple
+    - 'courier.push.apple.com'
+    #mi
+    - 'Mijia Cloud'
 
 # 节点订阅
 # 默认每六小时更新一次节点订阅
 proxy-providers:  
   全球节点:
     type: http
-    path: ./Proxy/全球节点.yml
+    path: ./Proxy/全球节点.yaml
     url:   #填写订阅连接，注意空格
-    interval: 3600
-    filter: "^(?!.*?[流量|到期|重置]).*?$" #否定式前瞻 基本表达式为^(?!匹配模式),含有流量|到期|重置的节点会被排除
+    interval: 21600
+    #否定式前瞻排除正则,基本表达式为^(?!匹配模式),".*?"表示任意字符.排除名字含有[流量|到期|重置]中任意一个的节点
+    filter: "^(?!.*?[流量|到期|重置]).*?$" 
+    #直接正则匹配排除,和上一行的表达式是一样的作用,在mihomo上可以工作,P核不清楚
+    exclude-filter: "流量|到期|重置"
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
       
-  0.1倍率:
-    type: file                 #订阅就改http，和上面的全球节点一致，因为上面已经保存过一次订阅文件了，所以直接使用现成的file
-    path: ./Proxy/全球节点.yml   
-    interval: 3600
-    filter: 倍率0.1             #含有“倍率0.1”的节点才会出现
+  0.1倍率: 
+#订阅就改http，和上面的全球节点一致，因为上面已经保存过一次订阅文件了，所以直接使用现成的file
+    type: file                 
+    path: ./Proxy/全球节点.yaml   
+    interval: 21600
+#以0.1倍率节点为例,如果在此处就filter一次,那么在proxy-groups中就可以少显示一个0.1倍率节点组
+#换句话说在这里filter是作用于底层的节点列表,参见133行.在proxy-groups中filter则还可以套娃上别的proxy-groups,参见138行
+    filter: 倍率0.1   #含有“倍率0.1”的节点才会出现
+    exclude-filter: 
     health-check:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300  
+
+  HK:
+    type: file
+    path: ./Proxy/全球节点.yaml  
+    interval: 21600
+    filter: ".*?[HK|香港].*?$" #正向匹配
+    exclude-filter: 
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
              
 # 节点组
 # 默认每分钟测试一次节点延时
 # 容差参数未开启时默认为0ms
 proxy-groups:
-  - name: 🐟 漏网之鱼
-    type: select
-    proxies:
-      - 🎯 全球直连
-      - 🚀 手动切换
-
   - name: 🚀 手动切换
     type: select
     use:
-      - 全球节点     
+      - 全球节点 
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 手动切换    
 
   - name: 📲 电报消息
     type: select    
     proxies:
-      - 🚀 手动切换       
+      - 🚀 手动切换
+      - 🇭🇰HK             #133行
+      - 🇭🇰HK_no_X        #138行
       - ♻️ 自动选择
       - 🔯 故障转移
      
@@ -83,15 +130,33 @@ proxy-groups:
       - 🎯 全球直连     
       - 🚀 手动切换       
 
+  - name: "🇭🇰HK"
+    type: select
+    use:        
+      - "HK"    #使用的是92行proxy-providers中的HK 所以字段是"use",表示手动选择
+
+  - name: "🇭🇰HK_no_X"
+    type: select
+    filter: "^(?!.*?[0x|0.1x]).*?$"    #排除倍率
+    exclude-filter: "[0x|0.1x]"   #排除倍率
+    use:
+      - "HK"     #加上这个,表示除了沿用的之外,还可以在排除倍率后的节点中手动选择
+    proxies:        
+      - "🇭🇰HK"   #🇭🇰HK套娃了,所以用的字段是133行的proxies,表示沿用🇭🇰HK的选择
+
+#以上注释说人话就是,我要筛选HK节点,在此基础上,再次筛选HK中的某些节点
+
   - name: 🎯 全球直连
     type: select
     proxies:
       - DIRECT
+      - 🚀 手动切换
              
   - name: 🛑 隐私拦截
     type: select
     proxies:
-      - REJECT 
+      - REJECT
+      - DIRECT 
       
   - name: ♻️ 自动选择
     type: url-test
@@ -107,11 +172,11 @@ proxy-groups:
     interval: 300
     tolerance: 50
     use:
-      - 0.1倍率                                #注意这里写的是节点组2的节点
-    
+      - 全球节点   
      
 
 # 分流规则订阅
+# 已替换为cdn加速url
 # 默认每二十四小时更新一次分流规则
 rule-providers:
 
@@ -119,173 +184,195 @@ rule-providers:
     type: http
     behavior: classical
     path: ./RuleSet/NSFW.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/tanmoumou252/NSFWruleset/main/NSFW.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/NSFW.yaml
     interval: 86400
     
   China:
     type: http
     behavior: classical
     path: ./RuleSet/China.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/China/China.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/China/China.yaml
     interval: 86400
 
   AdvertisingTest:
     type: http
     behavior: classical
     path: ./RuleSet/AdvertisingTest.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingTest/AdvertisingTest.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/AdvertisingTest/AdvertisingTest.yaml
     interval: 86400
 
   Google:
     type: http
     behavior: classical
     path: ./RuleSet/Google.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Google/Google.yaml
     interval: 86400
 
   GoogleDrive:
     type: http
     behavior: classical
     path: ./RuleSet/GoogleDrive.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GoogleDrive/GoogleDrive.yaml
     interval: 86400
 
   OneDrive:
     type: http
     behavior: classical
     path: ./RuleSet/OneDrive.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/OneDrive/OneDrive.yaml
     interval: 86400
 
   Microsoft:
     type: http
     behavior: classical
     path: ./RuleSet/Microsoft.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Microsoft/Microsoft.yaml
     interval: 86400
 
   Github:
     type: http
     behavior: classical
     path: ./RuleSet/Github.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GitHub/GitHub.yaml
     interval: 86400  
 
   Apple:
     type: http
     behavior: classical
     path: ./RuleSet/Apple.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Apple/Apple.yaml
     interval: 86400
 
   Telegram:
     type: http
     behavior: classical
     path: ./RuleSet/Telegram.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Telegram/Telegram.yaml
     interval: 86400
 
   Game:
     type: http
     behavior: classical
     path: ./RuleSet/Game.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/Game.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Game/Game.yaml
     interval: 86400
 
   YouTube:
     type: http
     behavior: classical
     path: ./RuleSet/YouTube.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/YouTube/YouTube.yaml
+    interval: 86400
+
+  Netflix:
+    type: http
+    behavior: classical
+    path: ./RuleSet/Netflix.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Netflix/Netflix.yaml
     interval: 86400
 
   Bahamut:
     type: http
     behavior: classical
     path: ./RuleSet/Bahamut.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bahamut/Bahamut.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Bahamut/Bahamut.yaml
     interval: 86400
 
   GlobalMedia:
     type: http
     behavior: classical
     path: ./RuleSet/GlobalMedia.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/GlobalMedia/GlobalMedia.yaml
     interval: 86400
 
   Bilibili:
     type: http
     behavior: classical
     path: ./RuleSet/Bilibili.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml
     interval: 86400
 
   ChinaMedia:
     type: http
     behavior: classical
     path: ./RuleSet/ChinaMedia.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/ChinaMedia/ChinaMedia.yaml
     interval: 86400
 
   Developer:
     type: http
     behavior: classical
     path: ./RuleSet/Developer.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Developer/Developer.yaml
-    interval: 86400           
-
-  Proxy:
-    type: http
-    behavior: classical
-    path: ./RuleSet/Proxy.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/hope140/Clash/beta/Proxy.yaml
-    interval: 86400         
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Developer/Developer.yaml
+    interval: 86400 
 
   Download:
     type: http
     behavior: classical
     path: ./RuleSet/Download.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Download/Download.yaml
     interval: 86400    
 
   Lan:
     type: http
     behavior: classical
     path: ./RuleSet/Lan.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/Lan/Lan.yaml
     interval: 86400    
 
-  Firefox:  #该分组划到了直连，但是firefox商店adblock等广告屏蔽插件直连是无法安装的，需要出国
+  Lan_CN:
     type: http
     behavior: classical
+    path: ./RuleSet/Lan_CN.yaml
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/Lan_CN.yaml
+    interval: 86400
+
+  Firefox:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/firefoxruleset/Firefox.yaml
     path: ./RuleSet/Firefox.yaml
-    url: https://ghproxy.com/https://raw.githubusercontent.com/tanmoumou252/firefoxruleset/main/Firefox.yaml
-    interval: 86400   
+    interval: 86400
 
+  GPT_AI:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/GPT_AI.yaml
+    path: ./RuleSet/GPT_AI.yaml
+    interval: 86400
 
+  Twitter:
+    type: http
+    behavior: classical
+    url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Twitter/Twitter.yaml
+    path: ./RuleSet/Twitter.yaml
+    interval: 86400
 
 # 分流规则
 rules:
   - RULE-SET,NSFW,🚀 手动切换
-  - RULE-SET,Download,🎯 全球直连
-  - RULE-SET,Firefox,🎯 全球直连
-  - RULE-SET,Lan,🎯 全球直连
+  - RULE-SET,Download,DIRECT
+  - RULE-SET,Lan,DIRECT
   - RULE-SET,AdvertisingTest,🛑 隐私拦截
   - RULE-SET,Google,🚀 手动切换
   - RULE-SET,GoogleDrive,🚀 手动切换
-  - RULE-SET,OneDrive,🎯 全球直连
-  - RULE-SET,Microsoft,🎯 全球直连
-  - RULE-SET,Apple,🎯 全球直连
-  - RULE-SET,Telegram,📲 电报消息
-  - RULE-SET,Game,🎮 游戏平台
+  - RULE-SET,OneDrive,DIRECT
+  - RULE-SET,Microsoft,DIRECT
+  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Telegram,🚀 手动切换
+  - RULE-SET,Game,🎯 全球直连
   - RULE-SET,YouTube,🚀 手动切换
-  - RULE-SET,Bahamut,🚀 手动切换    
-  - RULE-SET,GlobalMedia,🚀 手动切换 
+  - RULE-SET,Bahamut,🚀 手动切换
+  - RULE-SET,Netflix,🚀 手动切换
+  - RULE-SET,GlobalMedia,🚀 手动切换
   - RULE-SET,Bilibili,🎯 全球直连
-  - RULE-SET,ChinaMedia,🎯 全球直连
+  - RULE-SET,ChinaMedia,DIRECT
   - RULE-SET,Github,🚀 手动切换
   - RULE-SET,Developer,🚀 手动切换
-  - RULE-SET,Proxy,🚀 手动切换
-  - RULE-SET,China,🎯 全球直连
+  - RULE-SET,GPT_AI,🚀 手动切换
+  - RULE-SET,Twitter,🚀 手动切换
+  - RULE-SET,Lan_CN,DIRECT  
+  - RULE-SET,China,DIRECT
+  - RULE-SET,Firefox,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,🐟 漏网之鱼
