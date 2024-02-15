@@ -58,7 +58,7 @@ sniffer:
     #mi
     - 'Mijia Cloud'
 
-proxy-providers:  #机场的节点
+proxy-providers:  #机场的节点 6小时更新一次
   freeapp:  #单个订阅的节点
     type: http
     path: ./profiles/rCRsUnT7urMQ.yaml
@@ -96,7 +96,7 @@ proxy-groups:
     - name: "🚀 手动切换"
       type: select       
       use:    #机场节点
-      - freeapp
+        - freeapp
       proxies:    #单个节点
         - "🆓1"           
     - name: "🐟 漏网之鱼"
@@ -111,12 +111,12 @@ proxy-groups:
         - "🔯 故障转移"
       #  - "🔞 去除审查"
 
-#被注释掉用于"去除审查"的一个代理策略组,去除含有 韩国|韩 的节点
+# 被注释掉用于"去除审查"的一个代理策略组,去除含有 韩国|韩 的节点
 #    - name: "🔞 去除审查"
 #      type: select
 #      exclude-filter: "韩国|韩"
 #      use:
-#      - freeapp
+#        - freeapp
 #      proxies: 
 #        - "🆓1"
 
@@ -131,7 +131,7 @@ proxy-groups:
     - name: "🔯 故障转移" #名字是fallback,用的url-test
       type: url-test
       use:
-      - freeapp
+        - freeapp
       proxies:
         - "🆓1"
       url: http://www.gstatic.com/generate_204
@@ -139,133 +139,135 @@ proxy-groups:
       tolerance: 50
 
 rules:
-    - "RULE-SET,NSFW,🎯 R18"
+    - RULE-SET,NSFW,🎯 R18
     - RULE-SET,Lan_CN,DIRECT
     - GEOIP,CN,DIRECT
-    - "RULE-SET,Twitter,🚀 手动切换"
-    - "RULE-SET,GPT_AI,🚀 手动切换"
-    - "RULE-SET,Github,🚀 手动切换"
+    - RULE-SET,Twitter,🚀 手动切换
+    - RULE-SET,GPT_AI,🚀 手动切换
+    - RULE-SET,Github,🚀 手动切换
     - RULE-SET,Firefox,DIRECT
-    - "RULE-SET,Developer,🚀 手动切换"
+    - RULE-SET,Developer,🚀 手动切换
     - RULE-SET,ChinaMedia,DIRECT
     - RULE-SET,BiliBili,DIRECT
-    - "RULE-SET,GlobalMedia,🚀 手动切换"
-    - "RULE-SET,Bahamut,🚀 手动切换"
-    - "RULE-SET,YouTube,🚀 手动切换"
-    - "RULE-SET,Telegram,📲 电报消息"
+    - RULE-SET,GlobalMedia,🚀 手动切换
+    - RULE-SET,Bahamut,🚀 手动切换
+    - RULE-SET,YouTube,🚀 手动切换
+    - RULE-SET,Telegram,📲 电报消息
     - RULE-SET,Apple,DIRECT
     - RULE-SET,Microsoft,DIRECT
     - RULE-SET,OneDrive,DIRECT
-    - "RULE-SET,GoogleDrive,🚀 手动切换"
-    - "RULE-SET,Google,🚀 手动切换"
+    - RULE-SET,GoogleDrive,🚀 手动切换
+    - RULE-SET,Google,🚀 手动切换
     - MATCH,🐟 漏网之鱼
 
+#规则订阅 更新频率为3天
+#频率再快也没用,cdn那边缓存又没刷新
 rule-providers:  #已替换为cdn加速url 存放位置的名字乱取的
     Apple:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Apple/Apple.yaml
         path: ./a0def9c717a5edb612c9737d907a9091628f9050ef2aaecea4615f76.yaml
-        interval: 3600
+        interval: 259200
     Bahamut:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Bahamut/Bahamut.yaml
         path: ./7ae0ed8c9d1a16f5fc6490b6e17d5b12d3c2b17fad6c992decd27e3a.yaml
-        interval: 3600
+        interval: 259200
     BiliBili:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/BiliBili/BiliBili.yaml
         path: ./f4bd01565b6462afbaf09794153f77dc73125f51bbdf6e7164529a76.yaml
-        interval: 3600
+        interval: 259200
     ChinaMedia:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/ChinaMedia/ChinaMedia.yaml
         path: ./4d5110df70bdec70f04b2169a53cc9e34fb7a50f383ec28ea9ab42df.yaml
-        interval: 3600
+        interval: 259200
     Developer:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Developer/Developer.yaml
         path: ./2941718ec7003322a826d86afde1d9d71ad114e9ab904f7f16e7bcce.yaml
-        interval: 3600
+        interval: 259200
     Firefox:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/tanmoumou252/firefoxruleset/Firefox.yaml
         path: ./2fc21a5a1680e7bdf014e9910f23f7b8e77cfeaafba89d62ff85053a.yaml
-        interval: 3600
+        interval: 259200
     GPT_AI:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/GPT_AI.yaml
         path: ./fc818f0a22092167fb908170d30f237ca4d63e88c031b8e347ed9646.yaml
-        interval: 3600
+        interval: 259200
     Github:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/GitHub/GitHub.yaml
         path: ./d52df918e7b8ab75976c2ac865fe254ee2eaeffbc4bb3d6c6742a41c.yaml
-        interval: 3600
+        interval: 259200
     GlobalMedia:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/GlobalMedia/GlobalMedia.yaml
         path: ./9e93217b5c00a63955e75c502bf82166ad533972cbbb9761811cad4c.yaml
-        interval: 3600
+        interval: 259200
     Google:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Google/Google.yaml
         path: ./0c8dbbd475c0f66b628bd0a5feee19f2842b6e60c18b63aca6c1152b.yaml
-        interval: 3600
+        interval: 259200
     GoogleDrive:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/GoogleDrive/GoogleDrive.yaml
         path: ./b0f9de9faed7d77bb670da1a6cdc8941eff56dd769b9d8dd59aa251f.yaml
-        interval: 3600
+        interval: 259200
     Lan_CN:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/Lan_CN.yaml
         path: ./a9621673a0b65589dacf5363ec9e401c4bf23cb7d29dac60e433a4aa.yaml
-        interval: 3600
+        interval: 259200
     Microsoft:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Microsoft/Microsoft.yaml
         path: ./acf6c6a040e8ad1e485044bfcff7db95402d7689dbd7d2bd042f00e0.yaml
-        interval: 3600
+        interval: 259200
     NSFW:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/tanmoumou252/NSFWruleset/NSFW.yaml
         path: ./21827ac8b68e31e4a0d775741251b97261d1c94d6c36d72f252af0dc.yaml
-        interval: 3600
+        interval: 259200
     OneDrive:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/OneDrive/OneDrive.yaml
         path: ./316d1e9b77d23afb0290047d0d2919da05d1649ab30a86766676d608.yaml
-        interval: 3600
+        interval: 259200
     Telegram:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Telegram/Telegram.yaml
         path: ./ac29ce7d6885a74f89188bda943e8499f8a8d1655abe9a102f87165b.yaml
-        interval: 3600
+        interval: 259200
     Twitter:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/Twitter/Twitter.yaml
         path: ./dd1de5f95536c6b93491ad73b9ed8fff42c21cf3c818b8e7d2bcb7a2.yaml
-        interval: 3600
+        interval: 259200
     YouTube:
         type: http
         behavior: classical
         url: https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script/rule/Clash/YouTube/YouTube.yaml
         path: ./8275a371fbcf56e1806dd1af00fa13dbe0c247ebab1c3fe72d3c63b1.yaml
-        interval: 3600
+        interval: 259200
