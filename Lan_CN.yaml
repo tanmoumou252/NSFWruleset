@@ -1,4 +1,4 @@
-# UPDATED: 2023-11-27 18:34:17
+# UPDATED: 2024-02-25 23:46:32
 
 payload:
 # CDN
@@ -740,6 +740,7 @@ payload:
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,taihe.com
   - DOMAIN-SUFFIX,tanmoumou.link
+  - DOMAIN-SUFFIX,tanmoumou.v6.army
   - DOMAIN-SUFFIX,th-sjy.com
   - DOMAIN-SUFFIX,tianqi.com
   - DOMAIN-SUFFIX,tianqistatic.com
