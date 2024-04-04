@@ -1,10 +1,14 @@
-# UPDATED: 2024-04-02 20:46:12
+# UPDATED: 2024-04-04 13:44:24
 
 payload:
 # CDN
   - DOMAIN-KEYWORD,jsdelivr
   - DOMAIN-SUFFIX,jsdelivr.net
   - DOMAIN-SUFFIX,jsdelivr.com
+# Clash dashboard
+  - DOMAIN-SUFFIX,clash.razord.top
+  - DOMAIN-SUFFIX,yacd.haishan.me
+  - DOMAIN-SUFFIX,d.metacubex.one
 # Download  
   - DOMAIN-SUFFIX,qbittorrent.org  
   - DOMAIN-KEYWORD,aria2
