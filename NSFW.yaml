@@ -1,4 +1,4 @@
-# UPDATED: 2024-01-14 18:52:20
+# UPDATED: 2024-04-06 07:43:14
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -19,9 +19,10 @@ payload:
   - DOMAIN-KEYWORD,freeapp.buzz
   - DOMAIN-KEYWORD,rutrk.org
   - DOMAIN-KEYWORD,rutracker
-  - DOMAIN-KEYWORD,tmdb
+  - DOMAIN-KEYWORD,tmdb  
   - DOMAIN-KEYWORD,themoviedb
   - DOMAIN-KEYWORD,sb-cd.com
+  - DOMAIN-KEYWORD,cdnstreamwish
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
@@ -156,5 +157,6 @@ payload:
   - DOMAIN-SUFFIX,mrzyx.xyz
   - DOMAIN-SUFFIX,db.msin.jp
   - DOMAIN-SUFFIX,img.msin.info
+  - DOMAIN-SUFFIX,sw-cdnstreamwish.com
   - PROCESS-NAME,javaw.exe
-  - PROCESS-NAME,tinyMediaManager.exe      # /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
+  - PROCESS-NAME,tinyMediaManager.exe      #v6地址 /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
