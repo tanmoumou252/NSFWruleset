@@ -1,9 +1,10 @@
-# UPDATED: 2024-04-07 17:19:41
+# UPDATED: 2024-04-08 22:23:24
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
   # ADs but supjav need
   - DOMAIN-SUFFIX,whos.amung.us
+  - DOMAIN-SUFFIX,jwpcdn.com
   
   # nothing special
   - DOMAIN-KEYWORD,akamai
