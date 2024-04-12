@@ -1,11 +1,11 @@
-# UPDATED: 2024-04-08 22:23:24
+# UPDATED: 2024-04-10
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
   # ADs but supjav need
   - DOMAIN-SUFFIX,whos.amung.us
   - DOMAIN-SUFFIX,jwpcdn.com
-  
+
   # nothing special
   - DOMAIN-KEYWORD,akamai
   - DOMAIN-KEYWORD,btsow
@@ -70,6 +70,7 @@ payload:
   - DOMAIN-SUFFIX,litvp.com
   - DOMAIN-SUFFIX,lobstertube.com
   - DOMAIN-SUFFIX,maturetube.com
+  - DOMAIN-SUFFIX,mauobzw.com
   - DOMAIN-SUFFIX,mikanani.me
   - DOMAIN-SUFFIX,megatube.xxx
   - DOMAIN-SUFFIX,melonstube.com
@@ -142,6 +143,7 @@ payload:
   - DOMAIN-SUFFIX,tubev.sex
   - DOMAIN-SUFFIX,tvmaze.com 
   - DOMAIN-SUFFIX,upskirt.tv
+  - DOMAIN-SUFFIX,upimagez.com
   - DOMAIN-SUFFIX,ver1.sptvp.com
   - DOMAIN-SUFFIX,vikacg.com
   - DOMAIN-SUFFIX,vipwank.com
