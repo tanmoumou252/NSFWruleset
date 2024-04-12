@@ -1,10 +1,11 @@
-# UPDATED: 2024-04-05 00:06:51
+# UPDATED: 2024-04-12
 
 payload:
-# CDN
+# CDN/Mirror
   - DOMAIN-KEYWORD,jsdelivr
   - DOMAIN-SUFFIX,jsdelivr.net
   - DOMAIN-SUFFIX,jsdelivr.com
+#  - DOMAIN-SUFFIX,fastgit.org
 # Clash dashboard
   - DOMAIN-SUFFIX,clash.razord.top
   - DOMAIN-SUFFIX,yacd.haishan.me
@@ -24,6 +25,8 @@ payload:
   - DOMAIN,router.asus.com
   - DOMAIN,setmeup.arubanetworks.com
   - DOMAIN,www.asusrouter.com
+  - DOMAIN-KEYWORD,lucky666
+  - DOMAIN-SUFFIX,daji.it
   - DOMAIN-SUFFIX,0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
   - DOMAIN-SUFFIX,0.in-addr.arpa
   - DOMAIN-SUFFIX,1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa
@@ -714,7 +717,7 @@ payload:
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,taihe.com
   - DOMAIN-SUFFIX,tanmoumou.link
-  - DOMAIN-SUFFIX,tanmoumou.v6.army
+  - DOMAIN,tanmoumou.v6.army
   - DOMAIN-SUFFIX,th-sjy.com
   - DOMAIN-SUFFIX,tianqi.com
   - DOMAIN-SUFFIX,tianqistatic.com
@@ -772,3 +775,7 @@ payload:
   - DOMAIN-SUFFIX,zhongsou.com
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN-KEYWORD,zhaoziyuan
+  - DST-PORT,8096
+  - DST-PORT,8920
+  - DST-PORT,5243
+  - DST-PORT,5244
