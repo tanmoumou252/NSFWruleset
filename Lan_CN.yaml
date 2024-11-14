@@ -1,11 +1,8 @@
-# UPDATED: 2024-04-12
+# UPDATED: 2024-11-14
 
 payload:
 # CDN/Mirror
-  - DOMAIN-KEYWORD,jsdelivr
-  - DOMAIN-SUFFIX,jsdelivr.net
-  - DOMAIN-SUFFIX,jsdelivr.com
-#  - DOMAIN-SUFFIX,fastgit.org
+  - DOMAIN-SUFFIX,fastgit.org
 # Clash dashboard
   - DOMAIN-SUFFIX,clash.razord.top
   - DOMAIN-SUFFIX,yacd.haishan.me
@@ -717,7 +714,7 @@ payload:
   - DOMAIN-SUFFIX,suning.com
   - DOMAIN-SUFFIX,synology.com
   - DOMAIN-SUFFIX,taihe.com
-  - DOMAIN-SUFFIX,tanmoumou.link
+  - DOMAIN-SUFFIX,tanmoumou.us.kg
   - DOMAIN,tanmoumou.v6.army
   - DOMAIN-SUFFIX,th-sjy.com
   - DOMAIN-SUFFIX,tianqi.com
@@ -776,7 +773,4 @@ payload:
   - DOMAIN-SUFFIX,zhongsou.com
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN-KEYWORD,zhaoziyuan
-  - DST-PORT,8096
-  - DST-PORT,8920
-  - DST-PORT,5243
-  - DST-PORT,5244
+
