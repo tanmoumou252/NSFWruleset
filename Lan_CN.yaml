@@ -702,6 +702,7 @@ payload:
   - DOMAIN-SUFFIX,ruguoapp.com
   - DOMAIN-SUFFIX,runoob.com
   - DOMAIN-SUFFIX,sankuai.com
+  - DOMAIN-SUFFIX,sb-cd.com
   - DOMAIN-SUFFIX,segmentfault.com
   - DOMAIN-SUFFIX,sf-express.com
   - DOMAIN-SUFFIX,shumilou.net
@@ -734,6 +735,7 @@ payload:
   - DOMAIN-SUFFIX,uxengine.net
   - DOMAIN-SUFFIX,videocc.net
   - DOMAIN-SUFFIX,vivo.com
+  - DOMAIN-SUFFIX,vdownload.hembed.com
   - DOMAIN-SUFFIX,wandoujia.com
   - DOMAIN-SUFFIX,weather.com
   - DOMAIN-SUFFIX,weico.cc
