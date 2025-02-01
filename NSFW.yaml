@@ -1,4 +1,4 @@
-# UPDATED: 2024-11-14
+# UPDATED: 2025-02-02
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -58,11 +58,11 @@ payload:
   - DOMAIN-SUFFIX,hitomi.la
   - DOMAIN-SUFFIX,hotporntubes.com
   - DOMAIN-SUFFIX,imcsea.club
-  - DOMAIN-SUFFIX,imdb.com
   - DOMAIN-SUFFIX,its.porn
   - DOMAIN-SUFFIX,ixxx.com
   - DOMAIN-SUFFIX,jwplayer.com
   - DOMAIN-SUFFIX,kimochi.info
+  - DOMAIN-SUFFIX,kpkuang.org
   - DOMAIN-SUFFIX,litvp.com
   - DOMAIN-SUFFIX,lobstertube.com
   - DOMAIN-SUFFIX,maturetube.com
@@ -160,6 +160,4 @@ payload:
   - DOMAIN-SUFFIX,mrzyx.xyz
   - DOMAIN-SUFFIX,db.msin.jp
   - DOMAIN-SUFFIX,img.msin.info
-  - DOMAIN-SUFFIX,sw-cdnstreamwish.com
-  - PROCESS-NAME,javaw.exe
-  - PROCESS-NAME,tinyMediaManager.exe      #v6地址 /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
+  - DOMAIN-SUFFIX,sw-cdnstreamwish.com     #v6地址 /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
