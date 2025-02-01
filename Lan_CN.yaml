@@ -1,4 +1,4 @@
-# UPDATED: 2025-01-25
+# UPDATED: 2025-02-02
 
 payload:
 #Alist
@@ -777,4 +777,4 @@ payload:
   - DOMAIN-SUFFIX,zhongsou.com
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN-KEYWORD,zhaoziyuan
-
+  - DOMAIN-KEYWORD,datasets.imdbws.com
