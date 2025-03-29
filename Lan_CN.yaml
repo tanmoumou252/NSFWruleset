@@ -1,4 +1,4 @@
-# UPDATED: 2025-02-02
+# UPDATED: 2025-03-29
 
 payload:
 #Alist
@@ -704,7 +704,6 @@ payload:
   - DOMAIN-SUFFIX,ruguoapp.com
   - DOMAIN-SUFFIX,runoob.com
   - DOMAIN-SUFFIX,sankuai.com
-  - DOMAIN-SUFFIX,sb-cd.com
   - DOMAIN-SUFFIX,segmentfault.com
   - DOMAIN-SUFFIX,sf-express.com
   - DOMAIN-SUFFIX,shumilou.net
