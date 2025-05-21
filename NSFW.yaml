@@ -1,4 +1,4 @@
-# UPDATED: 2025-03-29
+# UPDATED: 2025-05-21
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -24,6 +24,7 @@ payload:
   - DOMAIN-KEYWORD,tmdb  
   - DOMAIN-KEYWORD,themoviedb
   - DOMAIN-KEYWORD,cdnstreamwish
+  - DOMAIN-KEYWORD,zpod
   - DOMAIN-SUFFIX,100606.xyz
   - DOMAIN-SUFFIX,18comic.vip
   - DOMAIN-SUFFIX,3movs.com
@@ -161,4 +162,5 @@ payload:
   - DOMAIN-SUFFIX,mrzyx.xyz
   - DOMAIN-SUFFIX,db.msin.jp
   - DOMAIN-SUFFIX,img.msin.info
+  - DOMAIN-SUFFIX,zpod.net
   - DOMAIN-SUFFIX,sw-cdnstreamwish.com     #v6地址 /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
