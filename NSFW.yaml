@@ -1,4 +1,4 @@
-# UPDATED: 2025-05-21
+# UPDATED: 2025-08-29
 # 看剧算不算另一种意义上的NSFW呢
 
 payload:
@@ -91,7 +91,7 @@ payload:
   - DOMAIN-SUFFIX,porndig.com
   - DOMAIN-SUFFIX,porndoe.com
   - DOMAIN-SUFFIX,porndroids.com
-  - DOMAIN-SUFFIX,pornerbros.com  
+  - DOMAIN-SUFFIX,pornerbros.com
   - DOMAIN-SUFFIX,pornhd.com
   - DOMAIN-SUFFIX,pornheed.com
   - DOMAIN-SUFFIX,pornhost.com
@@ -139,7 +139,7 @@ payload:
   - DOMAIN-SUFFIX,trakt.tv
   - DOMAIN-SUFFIX,tube8.com
   - DOMAIN-SUFFIX,tubev.sex
-  - DOMAIN-SUFFIX,tvmaze.com 
+  - DOMAIN-SUFFIX,tvmaze.com
   - DOMAIN-SUFFIX,upskirt.tv
   - DOMAIN-SUFFIX,upimagez.com
   - DOMAIN-SUFFIX,ver1.sptvp.com
@@ -163,4 +163,54 @@ payload:
   - DOMAIN-SUFFIX,db.msin.jp
   - DOMAIN-SUFFIX,img.msin.info
   - DOMAIN-SUFFIX,zpod.net
-  - DOMAIN-SUFFIX,sw-cdnstreamwish.com     #v6地址 /128表示固定ip /64表示四个部位为前缀 /32表示两个部位为前缀 后四个部位为网卡标识
+  - DOMAIN-SUFFIX,sw-cdnstreamwish.com
+  - DOMAIN-SUFFIX,south-plus.net
+  - DOMAIN-SUFFIX,v2rayse.com
+  - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,acgrip.com
+  - DOMAIN-SUFFIX,supjav.com
+  - DOMAIN-SUFFIX,cor-games.com
+  - DOMAIN-SUFFIX,xiaojiadianmovie.be
+  - DOMAIN-SUFFIX,kanav.info
+  - DOMAIN-SUFFIX,woyekan.com
+  - DOMAIN-SUFFIX,hentaiera.com
+  - DOMAIN-SUFFIX,leijing1.com
+  - DOMAIN-SUFFIX,hdhive.online
+  - DOMAIN-SUFFIX,diyibanzhu.me
+  - DOMAIN-SUFFIX,avcar.vip
+  - DOMAIN-SUFFIX,white-plus.net
+  - DOMAIN-SUFFIX,chinaavg.com
+  - DOMAIN-SUFFIX,jmcomic-creed.club
+  - DOMAIN-SUFFIX,lvcha.org
+  - DOMAIN-SUFFIX,snow-plus.net
+  - DOMAIN-SUFFIX,imoutolove.me
+  - DOMAIN-SUFFIX,loverslab.com
+  - DOMAIN-SUFFIX,njav.tv
+  - DOMAIN-SUFFIX,javxx.com
+  - DOMAIN-SUFFIX,fc2ppvdb.com
+  - DOMAIN-SUFFIX,7mmtv.sx
+  - DOMAIN-SUFFIX,missav123.com
+  - DOMAIN-SUFFIX,tv-skyairav.cc
+  - DOMAIN-SUFFIX,2dfan.com
+  - DOMAIN-SUFFIX,wnacg.com
+  - DOMAIN-SUFFIX,kemono.su
+  - DOMAIN-SUFFIX,hentaidude.com
+  - DOMAIN-SUFFIX,smallcolor.link
+  - DOMAIN-SUFFIX,rule34video.com
+  - DOMAIN-SUFFIX,rule34.xxx
+  - DOMAIN-SUFFIX,onlyhentaistuff.com
+  - DOMAIN-SUFFIX,haho.moe
+  - DOMAIN-SUFFIX,boards.guro.cx
+  - DOMAIN-SUFFIX,ohentai.org
+  - DOMAIN-SUFFIX,hentaivideoworld.com
+  - DOMAIN-SUFFIX,hentaitk.net
+  - DOMAIN-SUFFIX,muchohentai.com
+  - DOMAIN-SUFFIX,imhentai.xxx
+  - DOMAIN-SUFFIX,woqukan.com
+  - DOMAIN-SUFFIX,blog.reimu.net
+  - DOMAIN-SUFFIX,zyxz.ailoli.us
+  - DOMAIN-SUFFIX,eyny.com
+  - DOMAIN-SUFFIX,namethatporn.com
+  - DOMAIN-SUFFIX,ryuugames.com
+  - DOMAIN-SUFFIX,javlibrary.com
+  - DOMAIN-SUFFIX,vintage-erotic.net
