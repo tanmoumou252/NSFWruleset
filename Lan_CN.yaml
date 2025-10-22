@@ -1,4 +1,4 @@
-# UPDATED: 2025-03-29
+# UPDATED: 2025-10-22
 
 payload:
 #Alist
@@ -11,7 +11,7 @@ payload:
   - DOMAIN-SUFFIX,d.metacubex.one
 # Download  
   - DOMAIN-SUFFIX,qbittorrent.org  
-  - DOMAIN-KEYWORD,aria2
+#- DOMAIN-KEYWORD,aria2      aria2c may show  -> [SocketCore.cc:1019] errorCode=1 SSL/TLS handshake failure: Error: 操作成功完成。
   - DOMAIN-KEYWORD,thunder
   - DOMAIN-KEYWORD,xlliveud
   - DOMAIN-KEYWORD,xunlei
