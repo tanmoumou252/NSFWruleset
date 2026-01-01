@@ -1,8 +1,8 @@
 # NAME: AI ruleset
-# UPDATED: 2025年12月16日
+# UPDATED: 2026年1月1日
 
 payload:
-  #openai
+#openai
   - DOMAIN,browser-intake-datadoghq.com
   - DOMAIN,chat.openai.com.cdn.cloudflare.net
   - DOMAIN,openai-api.arkoselabs.com
@@ -66,3 +66,7 @@ payload:
 #poe
   - DOMAIN-SUFFIX,poe.com
   - DOMAIN-SUFFIX,poecdn.net
+
+#cerebras
+ - DOMAIN-SUFFIX,cerebras.ai
+ - DOMAIN-SUFFIX,api.cerebras.ai
