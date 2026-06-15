@@ -776,3 +776,5 @@ payload:
   - DOMAIN-SUFFIX,zhuihd.com
   - DOMAIN-KEYWORD,zhaoziyuan
   - DOMAIN-KEYWORD,datasets.imdbws.com
+# custom
+  - DOMAIN-KEYWORD,tanmoumou
