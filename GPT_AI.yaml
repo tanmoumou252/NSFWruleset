@@ -1,5 +1,5 @@
 # NAME: AI ruleset
-# UPDATED: 2026年1月1日
+# UPDATED: 2026年6月20日
 
 payload:
 #openai
@@ -63,9 +63,8 @@ payload:
   - DOMAIN-KEYWORD,developerprofiles
   - DOMAIN-KEYWORD,generativelanguage
 
-#poe
-  - DOMAIN-SUFFIX,poe.com
-  - DOMAIN-SUFFIX,poecdn.net
+#xiaomimimo
+  - DOMAIN-SUFFIX,xiaomimimo.com
 
 #cerebras
  - DOMAIN-SUFFIX,cerebras.ai
