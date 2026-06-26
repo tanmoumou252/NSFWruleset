@@ -65,6 +65,7 @@ payload:
   - DOMAIN,static.cloudflareinsights.com
   - DOMAIN,sydney.bing.com
   - DOMAIN,www.bing.com
+  - DOMAIN,m365.cloud.microsoft
   - DOMAIN-SUFFIX,algolia.net
   - DOMAIN-SUFFIX,api.microsoftapp.net
   - DOMAIN-SUFFIX,auth0.com
@@ -91,6 +92,7 @@ payload:
   - DOMAIN-SUFFIX,sentry.io
   - DOMAIN-SUFFIX,stripe.com
   - DOMAIN-SUFFIX,turn.livekit.cloud
+  - DOMAIN-SUFFIX,cloud.microsoft
   - DOMAIN-KEYWORD,openaicom-api
   - IP-CIDR,24.199.123.28/32
   - IP-CIDR,64.23.132.171/32
